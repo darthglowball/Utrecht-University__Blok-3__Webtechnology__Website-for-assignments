@@ -30,14 +30,18 @@ Assignment 2:
     - Food subclasses: Ice Cream, Sprite Lemon, Fries, Salad, Hamburger
 - data properties for Food: name, amount, price, spicey, allergy warning
 - a stickied current selected food item in its own frame: has 1) amount shown, 2) buttons to change amount, 3) add to orders button
+- place order button
 - orders frame of accepted food items and the amount displayed for each
-- add to cart button for a food item
+- add to orders button for a food item
 - plus minus buttons foor food item amount
 - indicator food item amount (local to food item, and a total)
 - indicator stickied to navigation that tells the amount of selected food items
 - accessibility menu (let it be stickied):
     - dropdown menu of elements whose style will be overwritten (body, header, footer, aside, article, section)
-    - dropdown menu of styles
-    - button to change font size of selected elements
+    - dropdown menu of styles to apply to selected elements
+    - input to change font size of selected elements
+    - color wheel to change color of selected elements
+    - shadow/outline size?
+    - background for text?
+    - the selected elements should be created on the fly? what??
 - event propagation: create a drag and drop sauce bottle that can be dropped on the food item. Drag and drop is a use case for event propagation, because when the user mouses out of the bottle, it will still need to move with the mouse cursor, so ancestor nodes of the bottle can detect this movement and up/down press.
-- order submitted feedback
