@@ -1,4 +1,5 @@
 TO DO:
+Assignment 1:
 - use <button> with or instead of <a> for navigation?
 - aria labels
 - alt attributes
@@ -13,3 +14,30 @@ TO DO:
 - desktop/mobile/tablet layouts
 - page content need to fit their parent container
 - SEO
+
+Assignment 2:
+- move the ice creams in menu from html to javascript menu class
+- create html food categories (id: food__category)
+    - id per category, eg.: category__ice-cream
+    - class per item in category, eg.: ice-cream__item1
+- implement Menu -> Category -> Food javascript classes
+    - An instance of a food type (eg. item1 of class IceCream) should automatically: 
+        1) build html as js object (possibly in a documentFragment)
+        2) inject instance properties into the object at the right places
+        3) be given DOM class names
+        4) be appended to the right category html
+- implement Food subclasses in javascript
+    - Food subclasses: Ice Cream, Sprite Lemon, Fries, Salad, Hamburger
+- data properties for Food: name, amount, price, spicey, allergy warning
+- a stickied current selected food item in its own frame: has 1) amount shown, 2) buttons to change amount, 3) add to orders button
+- orders frame of accepted food items and the amount displayed for each
+- add to cart button for a food item
+- plus minus buttons foor food item amount
+- indicator food item amount (local to food item, and a total)
+- indicator stickied to navigation that tells the amount of selected food items
+- accessibility menu (let it be stickied):
+    - dropdown menu of elements whose style will be overwritten (body, header, footer, aside, article, section)
+    - dropdown menu of styles
+    - button to change font size of selected elements
+- event propagation: create a drag and drop sauce bottle that can be dropped on the food item. Drag and drop is a use case for event propagation, because when the user mouses out of the bottle, it will still need to move with the mouse cursor, so ancestor nodes of the bottle can detect this movement and up/down press.
+- order submitted feedback
