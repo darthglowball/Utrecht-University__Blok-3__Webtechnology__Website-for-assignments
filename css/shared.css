@@ -63,7 +63,7 @@ section{
 Responsive Table
 */
 .table-wrapper{
-    content: "hrizontal scrollible >>";
+    content: "horizontal scrollible >>";
     overflow: auto;
 }
 
@@ -79,10 +79,8 @@ table{
     width: 100%;
     max-width: 100%;
     padding: 10px;
-    border-width: 2px;
+    border: 2px dashed red;
     border-radius: 20px;
-    border-color: red;
-    border-style: dashed;
     background: rgba(0, 229, 255, 0.3);
 }
 
@@ -129,6 +127,8 @@ table tr:nth-child(even) td{
 /* Main containers styling */
 .main-container{
     width: 100%;
+    min-height: 90vh;
+    margin-top: 6em;
     display: flex;
     justify-content: center;
     background: var(--background);
@@ -233,45 +233,27 @@ Card layout
     font-size: 30px;
 }
 
-.textbox{
-    text-align: center;
-    word-break: normal;
-    white-space: normal;
-    color: black;
-    background: var(--iceCreamCone);
-    margin-top: 5rem;
-    padding: 1rem;
-    border-radius: 1.5rem;
-    width: 100%;
-}
-
-.textbox p{
-    text-align: center;
-    word-break: normal;
-    white-space: normal;
-    width: 100%;
-}
 /**
 Row layout
 */
 
-.row-container h3{
-    width: 100%;
+.row-container{
+    color: #fff;
+    overflow-wrap: break-word;
     text-align: center;
     white-space: normal;
-    overflow-wrap: break-word;
+}
+
+.row-container h3{
+    width: 100%;
     font-size: 3rem;
-    color:#fff;
 }
 
 .row-container h5{
     width: 100%;
-    text-align: center;
-    overflow-wrap: break-word;
-    white-space: normal;
     font-size: 2rem;
-    color:#fff;
 }
+
 .row-container .row{
     display: flex;
     color: rgb(0, 229, 255);
@@ -300,10 +282,6 @@ Row layout
 .row-container .row .content p{
     text-align: center;
     color: black;
-}
-
-.row .content h3{
-    word-wrap: break-word;
 }
 
 .row .content p{
@@ -401,7 +379,7 @@ footer {
     100%{color: orange;}
 }
 
-#title {
+.introduction__title {
     margin: 3rem;
     font-family: Helvetica, sans-serif;
     font-size: 3rem;
@@ -409,20 +387,30 @@ footer {
     color: yellow;
 }
 
-#introduction {
-    align-self: stretch;
-    color: rgb(0, 255, 0);
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-width: 2px;
-    border-radius: 10px;
-    border-color: blue;
-    border-style: dashed;
-    text-shadow: 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black;
-    font-size: 24px;
+.introduction__paragraph{
+    text-align: center;
+    word-break: normal;
+    white-space: n ormal;
+    color: black;
+    background: var(--iceCreamCone);
+    margin-top: 5rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: 100%;
 }
 
-.rainbow-animation {
+.introduction__paragraph--colorfull {
+    align-self: stretch;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 2px dashed blue;
+    border-radius: 10px;
+    text-shadow: 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black;
+    font-size: 24px;
+    color: rgb(0, 255, 0);
+}
+
+.introducion__paragraph--rainbow-animation {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     background-clip: text;
     color: transparent;
