@@ -8,12 +8,10 @@
 
     .main-container{
         width: 90%;
-        background: var(--background);  
     }
     
     .content-container{
         width: 90%;
-        background: var(--pistache);
     }
 
 

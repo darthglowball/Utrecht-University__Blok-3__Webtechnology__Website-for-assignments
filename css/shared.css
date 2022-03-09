@@ -128,7 +128,6 @@ Responsive Table
 .content-container{
     flex-grow: 1;
     width: 100%;
-    background: var(--pistache);
 }
 
 /* Navigation bar styling */
@@ -188,23 +187,6 @@ side bar*/
     width: 10vmin;
 }
 
-/* Responsive general content layout
-*/
-.content-container .introduction{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-.content-container .introduction article{
-    max-width: 60rem;
-}
-
-.content-container .introduction article h1{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 6rem;
-}
 
 /*
 Card layout
@@ -214,13 +196,15 @@ Card layout
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
+    background: var(--pistache);
+    margin: 1em 0;
 }
 
 .card-container .card{
     padding: 5rem;
     text-align: center;
     border: var(--border);
-    background: var(--pistache);
+    /* background: var(--pistache); */
 }
 
 .card-container .card img{
@@ -240,6 +224,8 @@ Row layout
     overflow-wrap: break-word;
     text-align: center;
     white-space: normal;
+    background: var(--pistache);
+    margin: 1em 0;
 }
 
 .row-container h3{
@@ -362,19 +348,24 @@ footer {
 
 
 
+/* Introduction styles */
 
-@keyframes rainbow{
-    0%{color: orange;}	
-    10%{color: purple;}	
-    20%{color: red;}
-    30%{color: CadetBlue;}
-    40%{color: yellow;}
-    50%{color: coral;}
-    60%{color: green;}
-    70%{color: cyan;}
-    80%{color: DeepPink;}
-    90%{color: DodgerBlue;}
-    100%{color: orange;}
+.content-container .introduction{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: var(--pistache);
+    margin: 1em 0;
+}
+
+.content-container .introduction .introduction__article{
+    max-width: 60rem;
+}
+
+.content-container .introduction .introduction__article h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 6rem;
 }
 
 .introduction__title {
@@ -415,4 +406,18 @@ footer {
     font-size: 80px;
     animation: rainbow 20s infinite;
     text-shadow: 2px 2px 8px #000000;
+}
+
+@keyframes rainbow{
+    0%{color: orange;}	
+    10%{color: purple;}	
+    20%{color: red;}
+    30%{color: CadetBlue;}
+    40%{color: yellow;}
+    50%{color: coral;}
+    60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+    100%{color: orange;}
 }
