@@ -27,7 +27,7 @@
         font-size: 1.6rem;
     }
     
-    .header .navbar .button{
+    .header .navbar .navbar__button{
         padding: 1rem 2rem;
         font-size: 2rem;
     }

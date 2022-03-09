@@ -151,7 +151,7 @@ Responsive Table
     z-index: 100;
 }
 
-.navbar {
+.header .navbar {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;

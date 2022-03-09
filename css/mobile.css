@@ -22,7 +22,7 @@ Navigation bar*/
     padding: 1.5rem 0.5rem;
 }
 
-.navbar{
+.header .navbar{
     width: 100%;
 }
 
@@ -30,7 +30,7 @@ Navigation bar*/
     height: 6rem;
 }
 
-.header .navbar .button{
+.header .navbar .navbar__button{
     margin: .5rem 1rem;
     padding: 0.5rem;
     font-size: 2rem;
