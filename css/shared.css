@@ -73,7 +73,7 @@ Responsive Table
     overflow: auto;
 }
 
-table{
+.table{
     white-space: nowrap;
     border-collapse: collapse;
     width: 100%;
@@ -84,45 +84,36 @@ table{
     background: rgba(0, 229, 255, 0.3);
 }
 
-table th, table td{
+.table .th, .table .td{
     text-align: center;
     color: white;
     padding: 8px;
 }
 
-table td {
+.table .td {
     border-right: 1px solid #f8f8f8;
     font-size: 12px;
 }
 
-table thead th {
+.table .thead .th {
     color: #ffffff;
     background: pink;
 }
 
 
-table thead th:nth-child(odd) {
+.table .thead .th:nth-child(odd) {
     color: #ffffff;
     background: var(--iceCreamCone);
 }
 
-table tr:nth-child(even) {
+.table .tr:nth-child(even) {
     background: #F8F8F8;
     color: black;
 }
 
-table tr:nth-child(even) td{
+.table .tr:nth-child(even) td{
     color: black;
 }
-
-
-.heading{
-    text-align: center;
-    text-transform: uppercase;
-    padding-bottom: 3.5rem;
-    font-size: 4rem;
-}
-
 
 /* Main containers styling */
 .main-container{
@@ -141,6 +132,13 @@ table tr:nth-child(even) td{
 }
 
 /* Navigation bar styling */
+/* .heading{
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+} */
+
 .header{
     background: var(--iceCreamCone);
     display: flex;

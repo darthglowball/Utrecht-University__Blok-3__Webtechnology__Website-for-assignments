@@ -1,113 +1,140 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Delicaato Ice Cream / Menu </title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../css/shared.css">
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
 
-    <body>
-        <iframe src="../navigation.html" style="display: none;" onload="this.before(this.contentDocument.body.children[0]); this.remove();"></iframe>
-        <main class="main">
-            <iframe src="../decoration.html" style="display: none;" onload="this.before(this.contentDocument.body.children[0]); this.remove();"></iframe>
-            <div class="main-container">
-                <div class="content-container">
-                    <section class="introduction">
-                        <article>
-                            <h1 class= "introduction__title">
-                                <u> Ice Creams </u>
-                            </h1>
-                            <p class= "introduction__paragraph introduction__paragraph--colorfull"> 
-                                Explore our icecreams! </p>
-                            <p class = "introduction__paragraph">
-                                We serve beautiful ice-creams. Our ice-creams are made with the best ingredients. Our chefs begin at 7 in the morning to create fresh ice-cream. 
-                            </p>
-                        </article>
-                    </section>
-                    <section class="card-container iceCreamMenu">
-                        <article class="card">
-                            <img src="./images/ice-cream_White.png" alt="Vanille Ice Cream">
-                            <p>Vanille Ice Cream</p>
-                            <p>Allergies: <span class="dot dot__red"></span></p>
-                        </article>
-                        <article class="card">
-                            <img src="./images/ice-cream_Brown.png" alt="Hazel Ice Cream">
-                            <p>Hazel Ice Cream</p>
-                            <p>Allergies: <span class="dot dot__red"></span><span class="dot dot__red"></span></p>
-                        </article>
-                        <article class="card">
-                            <img src="./images/ice-cream_Green.png" alt="Pistache Ice Cream">
-                            <p>Pistache Ice Cream</p>
-                            <p>Allergies: <span class="dot dot__red"></span><span class="dot dot__red"></span></p>
-                        </article>
-                        <article class="card">
-                            <img src="./images/ice-cream_Pink.png" alt="Strawberry Cheesecake Ice Cream">
-                            <p>Strawberry cheesecake Ice Cream</p>
-                            <p>Allergies: <span class="dot dot__red"></span><span class="dot dot__blue"></span><span class="dot dot__yellow"></span></p>
-                        </article>
-                        <article class="card">
-                            <img src="./images/ice-cream_Purple.png" alt="Blueberry and Rasberry Ice Cream">
-                            <p>Blueberry and rasberry Ice Cream</p>
-                            <p>Allergies: <span class="dot dot__blue"></span></p>
-                        </article>
-                        <article class="card">
-                            <img src="./images/ice-cream_Blue.png" alt="Smurf Ice Cream">
-                            <p>Smurf Ice Cream</p>
-                            <p>Allergies: <span class="dot dot__red"></span></p>
-                        </article>
-                        <article class="card">
-                            <img src="./images/ice-cream_Orange.png" alt="Brown Butter Pecan Ice Cream">
-                            <p>Brown Butter Pecan Ice Cream</p>
-                            <p>Allergies: <span class="dot dot__red"></span><span class="dot dot_green"></span></p>
-                        </article>
-                        <article class="card">
-                            <img src="./images/lime-cone.jpg" alt="Lime Ice Cream">
-                            <p>Lime cheesecake Ice Cream</p>
-                            <p>Allergies: -</p>
-                        </article>
-                        <article class="card">
-                            <img src="./images/melon-cone.png" alt="Melon Ice Cream">
-                            <p>Melon cheesecake Ice Cream</p>
-                            <p>Allergies: -</p>
-                        </article>
-                        <article class="card">
-                            <img src="./images/cookie-cone.jpg" alt="Cookie Ice Cream">
-                            <p>Cookie Ice Cream</p>
-                            <p>Allergies: <span class="dot dot__red"></span><span class="dot dot__yellow"></span></p>
-                        </article>
+<head>
+    <title> Delicaato Ice Cream / Menu </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-                    </section>
-                    <article class="ingredients-overview row-container">
-                        <h3>Allergy Information:</h3>
-                        <div class="row">
-                            <section class="visual">
-                                <div class="table-wrapper">
-                                    <table>
-                                        <thead><th>Icon</th><th>Allergy</th></tr></thead>
-                                        <tbody>
-                                            <tr><td><span class="dot dot__red"></span></td><td>Contains milk</td></tr>
-                                            <tr><td><span class="dot dot__green"></span></td><td>Contains nuts</td></tr>
-                                            <tr><td><span class="dot dot__yellow"></span></td><td>Gluten </td></tr>
-                                            <tr><td><span class="dot dot__blue"></span></td><td>Rose fruit </td></tr>
-                                        </tbody>                    
-                                    </table>
-                                </div>
-                            </section>
-                            <section class="content introduction__paragraph">
-                                <p>At Delicaato we are very carefull with how we prepare ice cream. Before we start preparing ice cream we clean all our surfaces. 
-                                    We have a list of ice creams we can prepare together without contaminating the other ice creams with ingredients not already in it. 
-                                    As you come to expect from us, we clean all our surfaces between preparation. Even when we serve the ice cream we are carefull with allergies.
-                                    Every ice cream has it's own spoon, so we can't cross contaminate the ice cream.
-                                </p>
-                            </section>
-                        </div>
+<body>
+    <iframe src="../navigation.html" style="display: none;"
+        onload="this.before(this.contentDocument.body.children[0]); this.remove();"></iframe>
+    <main class="main">
+        <iframe src="../decoration.html" style="display: none;"
+            onload="this.before(this.contentDocument.body.children[0]); this.remove();"></iframe>
+        <div class="main-container">
+            <div class="content-container">
+                <section class="introduction">
+                    <article class="introduction__article">
+                        <h1 class="introduction__title">
+                            <u> Ice Creams </u>
+                        </h1>
+                        <p class="introduction__paragraph introduction__paragraph--colorfull">
+                            Explore our icecreams! </p>
+                        <p class="introduction__paragraph">
+                            We serve beautiful ice-creams. Our ice-creams are made with the best ingredients. Our chefs
+                            begin at 7 in the morning to create fresh ice-cream.
+                        </p>
                     </article>
-                </div>
+                </section>
+                <section class="card-container iceCreamMenu">
+                    <article class="card">
+                        <img src="./images/ice-cream_White.png" alt="Vanille Ice Cream">
+                        <p>Vanille Ice Cream</p>
+                        <p>Allergies: <span class="dot dot__red"></span></p>
+                    </article>
+                    <article class="card">
+                        <img src="./images/ice-cream_Brown.png" alt="Hazel Ice Cream">
+                        <p>Hazel Ice Cream</p>
+                        <p>Allergies: <span class="dot dot__red"></span><span class="dot dot__red"></span></p>
+                    </article>
+                    <article class="card">
+                        <img src="./images/ice-cream_Green.png" alt="Pistache Ice Cream">
+                        <p>Pistache Ice Cream</p>
+                        <p>Allergies: <span class="dot dot__red"></span><span class="dot dot__red"></span></p>
+                    </article>
+                    <article class="card">
+                        <img src="./images/ice-cream_Pink.png" alt="Strawberry Cheesecake Ice Cream">
+                        <p>Strawberry cheesecake Ice Cream</p>
+                        <p>Allergies: <span class="dot dot__red"></span><span class="dot dot__blue"></span><span
+                                class="dot dot__yellow"></span></p>
+                    </article>
+                    <article class="card">
+                        <img src="./images/ice-cream_Purple.png" alt="Blueberry and Rasberry Ice Cream">
+                        <p>Blueberry and rasberry Ice Cream</p>
+                        <p>Allergies: <span class="dot dot__blue"></span></p>
+                    </article>
+                    <article class="card">
+                        <img src="./images/ice-cream_Blue.png" alt="Smurf Ice Cream">
+                        <p>Smurf Ice Cream</p>
+                        <p>Allergies: <span class="dot dot__red"></span></p>
+                    </article>
+                    <article class="card">
+                        <img src="./images/ice-cream_Orange.png" alt="Brown Butter Pecan Ice Cream">
+                        <p>Brown Butter Pecan Ice Cream</p>
+                        <p>Allergies: <span class="dot dot__red"></span><span class="dot dot_green"></span></p>
+                    </article>
+                    <article class="card">
+                        <img src="./images/lime-cone.jpg" alt="Lime Ice Cream">
+                        <p>Lime cheesecake Ice Cream</p>
+                        <p>Allergies: -</p>
+                    </article>
+                    <article class="card">
+                        <img src="./images/melon-cone.png" alt="Melon Ice Cream">
+                        <p>Melon cheesecake Ice Cream</p>
+                        <p>Allergies: -</p>
+                    </article>
+                    <article class="card">
+                        <img src="./images/cookie-cone.jpg" alt="Cookie Ice Cream">
+                        <p>Cookie Ice Cream</p>
+                        <p>Allergies: <span class="dot dot__red"></span><span class="dot dot__yellow"></span></p>
+                    </article>
+
+                </section>
+                <article class="ingredients-overview row-container">
+                    <h3>Allergy Information:</h3>
+                    <div class="row">
+                        <section class="visual">
+                            <div class="table-wrapper">
+                                <table class="table">
+                                    <thead class="thead">
+                                        <tr class="tr"></tr>
+                                            <th class="th">Icon</th>
+                                            <th class="th">Allergy</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody">
+                                        <tr class="tr">
+                                            <td class="td"><span class="dot dot__red"></span></td>
+                                            <td class="td">Contains milk</td>
+                                        </tr>
+                                        <tr class="tr">
+                                            <td class="td"><span class="dot dot__green"></span></td>
+                                            <td class="td">Contains nuts</td>
+                                        </tr class="tr">
+                                        <tr>
+                                            <td class="td"><span class="dot dot__yellow"></span></td>
+                                            <td class="td">Gluten </td>
+                                        </tr>
+                                        <tr class="tr">
+                                            <td class="td"><span class="dot dot__blue"></span></td>
+                                            <td class="td">Rose fruit </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="content introduction__paragraph">
+                            <p>At Delicaato we are very carefull with how we prepare ice cream. Before we start
+                                preparing ice cream we clean all our surfaces.
+                                We have a list of ice creams we can prepare together without contaminating the other ice
+                                creams with ingredients not already in it.
+                                As you come to expect from us, we clean all our surfaces between preparation. Even when
+                                we serve the ice cream we are carefull with allergies.
+                                Every ice cream has it's own spoon, so we can't cross contaminate the ice cream.
+                            </p>
+                        </section>
+                    </div>
+                </article>
             </div>
-        </main>
-        <iframe src="../footer.html" style="display: none;" onload="this.before(this.contentDocument.body.children[0]); this.remove();"></iframe>
-    </body>
+        </div>
+    </main>
+    <iframe src="../footer.html" style="display: none;"
+        onload="this.before(this.contentDocument.body.children[0]); this.remove();"></iframe>
+</body>
+
 </html>
