@@ -1,5 +1,5 @@
-let $ = document.getElementById
-let $$ = document.querySelector
+let $ = id => document.getElementById(id)
+let $$ = selector => document.querySelector(selector)
 
 class Menu { // Singleton container for MenuSection.
     static data = [];
