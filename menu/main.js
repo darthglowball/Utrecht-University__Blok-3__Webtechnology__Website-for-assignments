@@ -1,7 +1,7 @@
 let $ = document.getElementById
 let $$ = document.querySelector
 
-class Menu { // Signleton container for MenuSection.
+class Menu { // Singleton container for MenuSection.
     static data = [];
 };
 
