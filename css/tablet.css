@@ -8,7 +8,7 @@
         background: var(--background);
     }
     
-    .content-container{
+    #content-container{
         width: 90%;
     }
 

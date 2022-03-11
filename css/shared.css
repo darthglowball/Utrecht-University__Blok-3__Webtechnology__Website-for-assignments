@@ -125,7 +125,7 @@ Responsive Table
     background: var(--background);
 }
 
-.content-container{
+#content-container{
     flex-grow: 1;
     width: 100%;
 }
@@ -350,7 +350,7 @@ Footer styling
 
 /* Introduction styles */
 
-.content-container .introduction{
+#content-container .introduction{
     align-items: center;
     justify-content: center;
     display: flex;
@@ -358,11 +358,11 @@ Footer styling
     margin: 1em 0;
 }
 
-.content-container .introduction .introduction__article{
+#content-container .introduction .introduction__article{
     max-width: 60rem;
 }
 
-.content-container .introduction .introduction__article h1{
+#content-container .introduction .introduction__article h1{
     text-align: center;
     text-transform: uppercase;
     font-size: 6rem;
