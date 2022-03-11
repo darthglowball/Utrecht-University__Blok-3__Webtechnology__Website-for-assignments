@@ -5,8 +5,6 @@ class Menu { // Singleton container for MenuSection.
     static data = [];
 };
 
-// Test
-
 // - MenuSection is used as a container for derivatives of Food and for the presentation thereof, so don't have Data classes inherit from it.
 // - "HasA" relationship with Menu.
 class MenuSection {
@@ -36,7 +34,6 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         let icon = document.createElement("img")
         let description = document.createElement("p")
         let allergies = document.createElement("p")
-        for (allergy_data of this.data.allergies
         let allergy = document.createElement("p")
         icon.setAttribute("src", "./images/" + this.data.icon + ".png")
         let description_text = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match) // Replaces CamelCase with spaces.
