@@ -65,10 +65,10 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
 
 
 class Food { // Data singleton. Do not instantiate it.
-    const price = 0;
-    const icon = "";
-    const calories = 0;
-    const allergies = [];
+    price = 0;
+    icon = "";
+    calories = 0;
+    allergies = [];
     name = ""
     amount = 0;
     stock = 0;
