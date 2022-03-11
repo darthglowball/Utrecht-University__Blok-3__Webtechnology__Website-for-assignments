@@ -26,6 +26,7 @@ new MenuSection("Hamburger");
 
 
 class FoodSection { // Presentation (& handler) of a Food derivative. Do not instantiate it.
+    static dot_choices = {"milk" : "red", "nuts" : "green", "gluten" : "yellow", "fruit" : "blue"}
     data = null;
     presentation = document.createElement("article");
     constructor(data){
@@ -48,10 +49,9 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
     };
     
     presentAllergies(parent){
-        static let dot_choices = {"milk" : "red", "nuts" : "green", "gluten" : "yellow", "fruit" : "blue"}
         for (allergy of this.data.allergies){
             let dot = document.createElement("span");
-            let dot_color = dot_choices[allergy]
+            let dot_color = this.dot_choices[allergy]
             if (dot_color){ // if a valid color was matched with an allergy.
                 dot.className = "dot dot__" + dot_color;
                 parent.appendChild(allergy_dot);
