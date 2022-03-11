@@ -27,7 +27,7 @@ Assignment 2:
         3) be given DOM class names
         4) be appended to the right category html
 - implement Food subclasses in javascript
-    - Food subclasses: Ice Cream, Sprite Lemon, Fries, Salad, Hamburger
+    - Food subclasses: IceCream, Beverage, Fries, Salad, Hamburger
 - data properties for Food: name, amount, price, spicey, allergy warning
 - a stickied current selected food item in its own frame: has 1) amount shown, 2) buttons to change amount, 3) add to orders button
 - place order button
