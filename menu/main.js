@@ -5,7 +5,7 @@ class Menu { // Singleton container for MenuSection.
     static data = [];
 };
 
-
+// Test
 
 // - MenuSection is used as a container for derivatives of Food and for the presentation thereof, so don't have Data classes inherit from it.
 // - "HasA" relationship with Menu.
