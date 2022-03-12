@@ -34,7 +34,6 @@
     margin-top: 0;
     margin-bottom: 0;
     box-shadow: 0 0 0.7rem black;
-    z-index: 100;
 }
 
 .menu-section .card {
@@ -62,6 +61,7 @@
     background-color:rgb(255, 211, 66);
     border: 0.1em solid red;
     border-radius: 1em 1em 0em 0em;
+    z-index: 100;
 }
 
 .ingredients-overview .row .introduction__paragraph{
