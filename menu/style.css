@@ -48,6 +48,7 @@
     display: block;
     text-align: center;
     margin-top: 1.5em;
+    margin-bottom: 0;
     background-color:rgb(255, 211, 66);
     border: 0.1em solid red;
     border-radius: 1em 1em 0em 0em;
