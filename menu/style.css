@@ -86,7 +86,7 @@
     position: sticky;
     display: block;
     bottom: 0;
-    height: 6rem;
+    height: auto;
     background-color: yellow;
     border: 0.1rem solid black;
 }
