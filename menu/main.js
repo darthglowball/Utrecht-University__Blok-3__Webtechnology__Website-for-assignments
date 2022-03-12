@@ -55,7 +55,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
             let dot_color = this.constructor.dot_choices[allergy]
             if (dot_color){ // if a valid color was matched with an allergy.
                 dot.className = "dot dot__" + dot_color;
-                parent.appendChild(allergy_dot);
+                parent.appendChild(dot);
             } else {
                 console.log("Warning: allergy_dot could not be matched with a color.");
             }
