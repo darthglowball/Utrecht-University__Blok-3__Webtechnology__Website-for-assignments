@@ -98,7 +98,7 @@
 }
 
 #shopping-basket__bought-container{
-    display: inline;
+    flex-basis: 100%;
     margin: 0.5rem;
     overflow: scroll;
     background-color: gray;
