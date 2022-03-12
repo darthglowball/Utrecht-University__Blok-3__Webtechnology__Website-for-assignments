@@ -123,6 +123,10 @@
     position: relative;
 }
 
+#shopping-basket__total {
+    text-align: center;
+}
+
 .shopping-basket__bought-item .icon, .shopping-basket__bought-item .portion-indicator {
     position: absolute;
     width: 100%;

@@ -83,12 +83,14 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         numberOfPortions.appendChild(document.createTextNode("0"));
         plusButton.addEventListener("click", ()=> {
             this.data.portions++;
+            totalFoodItems++;
             this.presentPortion(numberOfPortions, this.data.portions);
             updateShoppingBasket(this);
         });
         minusButton.addEventListener("click", ()=> {
             if (this.data.portions > 0){
                 this.data.portions--;
+                totalFoodItems--;
                 this.presentPortion(numberOfPortions, this.data.portions);
                 updateShoppingBasket(this);
             }
