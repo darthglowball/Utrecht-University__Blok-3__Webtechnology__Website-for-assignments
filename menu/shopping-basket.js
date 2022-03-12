@@ -3,6 +3,7 @@ $("shopping-basket__order-button").addEventListener("click", ()=> alert("order p
 function updateShoppingBasket(foodItem){
     let boughtItem = $$("#shopping-basket__bought-container ." + foodItem.presentation.classList[1]);
     if (boughtItem){
+        alert(foodItem.data.portions)
         if (foodItem.data.portions > 0){
             let portionIndicator = boughtItem.querySelector(".portion-indicator");
             portionIndicator.textContent = foodItem.data.portions + "x";
