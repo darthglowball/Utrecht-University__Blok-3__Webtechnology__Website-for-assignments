@@ -12,8 +12,7 @@ function updateShoppingBasket(foodItem){
         icon.className = "icon";
         icon.className = "portion-indicator";
         portionIndicator.appendChild(document.createTextNode(foodItem.data.portion + "x"));
-        boughtItem.classList[0] = "shopping-basket__bought-item";
-        boughtItem.classList[1] = foodItem.presentation.classList[1];
+        boughtItem.className = "shopping-basket__bought-item " + foodItem.presentation.classList[1];
         boughtItem.appendChild(icon);
         boughtItem.appendChild(portionIndicator);
         $("shopping-basket__bought-container").appendChild(boughtItem);
