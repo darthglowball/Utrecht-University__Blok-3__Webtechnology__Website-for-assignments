@@ -11,7 +11,7 @@ class MenuSection {
     static data = [];
     constructor(name){
         this.presentation = document.createElement("section");
-        this.presentation.className = "card-container";
+        this.presentation.className = "card-container menu-section";
         this.presentation.id = "menu-section__" + name;
         $("content-container").appendChild(this.presentation);
         Menu.data.push(this);
