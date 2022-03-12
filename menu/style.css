@@ -46,6 +46,7 @@
 .menu-section__title {
     font-size: 3em;
     display: block;
+    text-align: center;
 }
 
 .ingredients-overview .row .introduction__paragraph{
