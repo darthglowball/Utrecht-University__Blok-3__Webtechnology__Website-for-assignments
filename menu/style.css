@@ -101,6 +101,7 @@
     display: inline;
     margin: 0.5rem;
     overflow: scroll;
+    background-color: gray;
 }
 
 #shopping-basket__order-button {
