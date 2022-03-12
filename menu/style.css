@@ -24,15 +24,22 @@
 
 #menu-section__IceCream .card{
     background-color: pink;
+}
+
+#menu-section__Beverages .card{
+    background-color: rgb(110, 84, 255);
+}
+
+.menu-section .card {
     border-radius: 1.5rem;
     opacity: 0.8;
 }
 
-#menu-section__IceCream .card:hover{
+.menu-section .card:hover{
     opacity: 1;
 }
 
-#menu-section__IceCream .card p{
+.menu-section .card p{
     margin: 0.5rem 0;   
 }
 
