@@ -102,5 +102,7 @@
 }
 
 #shopping-basket__visibility-button {
-    height: 100%;
+    display: block;
+    padding: 0.5rem;
+    font-size: 3rem;
 }
