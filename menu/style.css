@@ -22,17 +22,17 @@
     background-color: yellow;
 }
 
-.iceCreamMenu .card{
+#menu-section__IceCream .card{
     background-color: pink;
     border-radius: 1.5rem;
     opacity: 0.8;
 }
 
-.iceCreamMenu .card:hover{
+#menu-section__IceCream .card:hover{
     opacity: 1;
 }
 
-.iceCreamMenu .card p{
+#menu-section__IceCream .card p{
     margin: 0.5rem 0;   
 }
 
