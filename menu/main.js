@@ -16,7 +16,7 @@ class MenuSection {
         let title = document.createElement("h2");
         title.className = "menu-section__title";
         title.appendChild(document.createTextNode(name + "s"));
-        this.presentation.appendChild(title);
+        $("content-container").appendChild(title);
         $("content-container").appendChild(this.presentation);
         Menu.data.push(this);
     };
