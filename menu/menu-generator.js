@@ -69,7 +69,9 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
             };
         };
     };
-
+    presentPortion(presentation, value){
+        presentation.textContent = value
+    }
     presentPortionSelector(parent){
         parent.className = "portion-selector";
         let minusButton = document.createElement("button");
@@ -79,12 +81,16 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         plusButton.appendChild(document.createTextNode("+"));
         numberOfPortions.appendChild(document.createTextNode("0"));
         plusButton.addEventListener("click", ()=> {
-            this.data.amount++;
+            this.data.portions++;
+            this.presentPortion(numberOfPortions, this.data.portions);
             updateShoppingBasket(this.data);
         });
         minusButton.addEventListener("click", ()=> {
-            this.data.amount--;
-            updateShoppingBasket(this.data);
+            if (this.data.portions > 0){
+                this.data.portions--;
+                this.presentPortion(numberOfPortions, this.data.portions);
+                updateShoppingBasket(this.data);
+            }
         });
         parent.appendChild(minusButton);
         parent.appendChild(numberOfPortions);
@@ -101,8 +107,8 @@ class Food { // Data singleton. This is for shared properties. Do not instantiat
     icon = "";
     calories = 0;
     allergies = [];
-    name = ""
-    amount = 0;
+    name = "";
+    portions = 0;
     stock = 0;
     presentationHandler = null;
     constructor(name, allergies, icon, price, stock){
