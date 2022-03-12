@@ -32,22 +32,23 @@ new MenuSection("Hamburger");
 class FoodSection { // Presentation (& handler) of a Food derivative. Do not instantiate it.
     static dotChoices = {"milk" : "red", "nuts" : "green", "gluten" : "yellow", "fruit" : "blue"}
     data = null;
-    presentation = document.createElement("article");
+    icon = null; // shortcut to a node in this.presentation
+    presentation = document.createElement("article"); // DOM object of all visuals
     constructor(data){
         this.data = data;
         this.presentation.className = "card " + this.data.constructor.name + "__" + this.data.name.replace(" ", "-");
-        let icon = document.createElement("img");
+        this.icon = document.createElement("img");
         let description = document.createElement("p");
         let allergies = document.createElement("p");
-        icon.setAttribute("src", "./images/" + this.data.icon);
+        this.icon.setAttribute("src", "./images/" + this.data.icon);
         let descriptionText = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
-        icon.setAttribute("alt", descriptionText);
+        this.icon.setAttribute("alt", descriptionText);
         description.appendChild(document.createTextNode(descriptionText));
         allergies.appendChild(document.createTextNode("Allergies: "));
         let portionSelector = document.createElement("div");
         this.presentPortionSelector(portionSelector);
         this.presentAllergies(allergies);
-        this.presentation.appendChild(icon);
+        this.presentation.appendChild(this.icon);
         this.presentation.appendChild(description);
         this.presentation.appendChild(allergies);
         this.presentation.appendChild(portionSelector);
@@ -70,7 +71,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         };
     };
     presentPortion(presentation, value){
-        presentation.textContent = value
+        presentation.textContent = value;
     }
     presentPortionSelector(parent){
         parent.className = "portion-selector";
@@ -83,13 +84,13 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         plusButton.addEventListener("click", ()=> {
             this.data.portions++;
             this.presentPortion(numberOfPortions, this.data.portions);
-            updateShoppingBasket(this.data);
+            updateShoppingBasket(this);
         });
         minusButton.addEventListener("click", ()=> {
             if (this.data.portions > 0){
                 this.data.portions--;
                 this.presentPortion(numberOfPortions, this.data.portions);
-                updateShoppingBasket(this.data);
+                updateShoppingBasket(this);
             }
         });
         parent.appendChild(minusButton);

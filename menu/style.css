@@ -99,6 +99,7 @@
 
 #shopping-basket__bought-container{
     flex-basis: 100%;
+    display: flex;
     margin: 0.5rem;
     padding: 0.5rem;
     overflow: scroll;
@@ -114,4 +115,11 @@
     border: 0.1rem solid black;
     border-radius: 0.5em;
     font-size: 1.5rem;
+}
+
+.shopping-basket__bought-item .icon, .shopping-basket__bought-item .portion-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
 }
