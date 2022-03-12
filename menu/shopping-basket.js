@@ -4,7 +4,7 @@ function updateShoppingBasket(foodItem){
     let boughtItem = $$("#shopping-basket__bought-container ." + foodItem.presentation.classList[1]);
     if (boughtItem){
         let portionIndicator = boughtItem.querySelector(".portion-indicator");
-        portionIndicator.textContent = foodItem.data.portion + "x";
+        portionIndicator.textContent = foodItem.data.portions + "x";
     } else {
         $("shopping-basket__bought-container").textContent = "";
         let boughtItem = document.createElement("div");
@@ -12,7 +12,7 @@ function updateShoppingBasket(foodItem){
         let portionIndicator = document.createElement("div");
         icon.className = "icon";
         portionIndicator.className = "portion-indicator";
-        portionIndicator.appendChild(document.createTextNode(foodItem.data.portion + "x"));
+        portionIndicator.appendChild(document.createTextNode(foodItem.data.portions + "x"));
         boughtItem.className = "shopping-basket__bought-item " + foodItem.presentation.classList[1];
         boughtItem.appendChild(icon);
         boughtItem.appendChild(portionIndicator);
