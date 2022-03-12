@@ -84,7 +84,7 @@
 
 #shopping-basket {
     position: sticky;
-    display: block;
+    display: flex;
     bottom: 0;
     height: auto;
     background-color: yellow;
@@ -93,22 +93,33 @@
 
 #shopping-basket__icon {
     display: block;
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
 }
 
 #shopping-basket__bought-container{
-    display: inline;
+    flex-basis: 100%;
+    display: flex;
     margin: 0.5rem;
+    padding: 0.5rem;
     overflow: scroll;
+    background-color: gray;
+    color: white;
+    font-size: 3rem;
 }
 
-#shopping-basket__controls {
-    display: inline;
-}
-
-#shopping-basket__visibility-button {
+#shopping-basket__order-button {
     display: block;
     padding: 0.5rem;
+    margin: 0.5rem;
+    border: 0.1rem solid black;
+    border-radius: 0.5em;
     font-size: 1.5rem;
+}
+
+.shopping-basket__bought-item .icon, .shopping-basket__bought-item .portion-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
 }

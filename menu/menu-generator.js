@@ -1,6 +1,3 @@
-let $ = id => document.getElementById(id)
-let $$ = selector => document.querySelector(selector)
-
 class Menu { // Singleton container for MenuSection.
     static data = [];
 };
@@ -35,22 +32,23 @@ new MenuSection("Hamburger");
 class FoodSection { // Presentation (& handler) of a Food derivative. Do not instantiate it.
     static dotChoices = {"milk" : "red", "nuts" : "green", "gluten" : "yellow", "fruit" : "blue"}
     data = null;
-    presentation = document.createElement("article");
+    icon = null; // shortcut to a node in this.presentation
+    presentation = document.createElement("article"); // DOM object of all visuals
     constructor(data){
         this.data = data;
         this.presentation.className = "card " + this.data.constructor.name + "__" + this.data.name.replace(" ", "-");
-        let icon = document.createElement("img");
+        this.icon = document.createElement("img");
         let description = document.createElement("p");
         let allergies = document.createElement("p");
-        icon.setAttribute("src", "./images/" + this.data.icon);
+        this.icon.setAttribute("src", "./images/" + this.data.icon);
         let descriptionText = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
-        icon.setAttribute("alt", descriptionText);
+        this.icon.setAttribute("alt", descriptionText);
         description.appendChild(document.createTextNode(descriptionText));
         allergies.appendChild(document.createTextNode("Allergies: "));
         let portionSelector = document.createElement("div");
-        this.createPortionSelector(portionSelector);
+        this.presentPortionSelector(portionSelector);
         this.presentAllergies(allergies);
-        this.presentation.appendChild(icon);
+        this.presentation.appendChild(this.icon);
         this.presentation.appendChild(description);
         this.presentation.appendChild(allergies);
         this.presentation.appendChild(portionSelector);
@@ -68,12 +66,14 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
                 dot.className = "dot dot__" + dotColor;
                 parent.appendChild(dot);
             } else {
-                console.log("Warning: allergy_dot could not be matched with a color.");
+                console.log("Warning: allergyDot could not be matched with a color.");
             };
         };
     };
-
-    createPortionSelector(parent){
+    presentPortion(presentation, value){
+        presentation.textContent = value;
+    }
+    presentPortionSelector(parent){
         parent.className = "portion-selector";
         let minusButton = document.createElement("button");
         let plusButton = document.createElement("button");
@@ -81,6 +81,18 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         minusButton.appendChild(document.createTextNode("-"));
         plusButton.appendChild(document.createTextNode("+"));
         numberOfPortions.appendChild(document.createTextNode("0"));
+        plusButton.addEventListener("click", ()=> {
+            this.data.portions++;
+            this.presentPortion(numberOfPortions, this.data.portions);
+            updateShoppingBasket(this);
+        });
+        minusButton.addEventListener("click", ()=> {
+            if (this.data.portions > 0){
+                this.data.portions--;
+                this.presentPortion(numberOfPortions, this.data.portions);
+                updateShoppingBasket(this);
+            }
+        });
         parent.appendChild(minusButton);
         parent.appendChild(numberOfPortions);
         parent.appendChild(plusButton);
@@ -96,8 +108,8 @@ class Food { // Data singleton. This is for shared properties. Do not instantiat
     icon = "";
     calories = 0;
     allergies = [];
-    name = ""
-    amount = 0;
+    name = "";
+    portions = 0;
     stock = 0;
     presentationHandler = null;
     constructor(name, allergies, icon, price, stock){

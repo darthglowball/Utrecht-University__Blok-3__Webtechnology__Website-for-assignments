@@ -80,16 +80,15 @@
         </div>
     </main>
     <div id="shopping-basket">
-        <div id="shopping-basket__controls">
-            <button id="shopping-basket__visibility-button">hide</button>
-            <img id="shopping-basket__icon" alt="shopping basket" src="./images/shopping-basket.png"></img>
-        </div>
-        <div id="shopping-basket__bought-container"></div>
+        <img id="shopping-basket__icon" alt="shopping basket" src="./images/shopping-basket.png"></img>
+        <div id="shopping-basket__bought-container">Your basket is empty. Click on a food item's + to fill up your basket.</div>
+        <button id="shopping-basket__order-button">Place Order</button>
     </div>
     <iframe src="../footer.html" style="display: none;"
         onload="this.before(this.contentDocument.body.children[0]); this.remove();"></iframe>
-    <script src = "menu-generator.js"></script>
+    <script src = "main.js"></script>
     <script src = "shopping-basket.js"></script>
+    <script src = "menu-generator.js"></script>
 </body>
 
 </html>
