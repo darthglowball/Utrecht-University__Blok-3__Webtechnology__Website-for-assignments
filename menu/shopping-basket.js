@@ -22,8 +22,8 @@ function updateShoppingBasket(foodItem){
         $("shopping-basket__bought-container").appendChild(boughtItem);
     }
     if ($("shopping-basket__bought-container").childElementCount === 0){
-        $("shopping-basket__bought-container").textContent = "";
-    } else {
         $("shopping-basket__bought-container").textContent = "Your basket is empty. Click on a food item's + to fill up your basket.";
+    } else {
+        $("shopping-basket__bought-container").textContent = "";
     }
 }
