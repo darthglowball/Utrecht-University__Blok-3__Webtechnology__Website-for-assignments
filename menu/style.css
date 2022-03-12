@@ -92,13 +92,19 @@
 }
 
 #shopping-basket__icon {
+    display: block;
     width: 5rem;
     height: 5rem;
 }
 
 #shopping-basket__bought-container{
+    display: inline;
     margin: 0.5rem;
     overflow: scroll;
+}
+
+#shopping-basket__controls {
+    display: inline;
 }
 
 #shopping-basket__visibility-button {
