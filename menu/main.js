@@ -75,7 +75,7 @@ class Food { // Data singleton. Do not instantiate it.
     stock = 0;
     presentation_handler = null;
     constructor(name, allergies, icon, price, stock){
-        [this.name, this.allergies, this.icon, this.price, this.stock] = name, allergies, icon, price, stock
+        [this.name, this.allergies, this.icon, this.price, this.stock] = [name, allergies, icon, price, stock];
         this.presentation_handler = new FoodSection(this); // Pass Data to Presentation layer.
         MenuSection.data.push(this);
     };
