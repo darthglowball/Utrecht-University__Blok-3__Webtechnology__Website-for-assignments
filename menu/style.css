@@ -100,3 +100,7 @@
     margin: 0.5rem;
     overflow: scroll;
 }
+
+#shopping-basket__visibility-button {
+    height: 100%;
+}
