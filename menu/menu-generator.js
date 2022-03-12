@@ -131,3 +131,7 @@ new IceCream("Cookie", ["milk", "gluten"], "cookie-cone.jpg", "1.70", 325);
 
 new Beverage("Coca-Cola", [], "coca-cola.png", "2.30", 110);
 new Beverage("Fanta Orange", [], "fanta-orange.png", "2.20", 50);
+
+
+
+

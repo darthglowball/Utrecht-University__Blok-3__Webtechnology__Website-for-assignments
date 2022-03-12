@@ -1,12 +1,3 @@
-/*
-.general {
-    display:flex;
-    width:90% ;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    flex-direction: row;    
-}*/
-
 input, textarea {
   width: 100%;
   padding: 12px;
@@ -15,7 +6,7 @@ input, textarea {
   resize: vertical;
 }
 
-.row {
+.form__row {
     color: black !important;
 }
 

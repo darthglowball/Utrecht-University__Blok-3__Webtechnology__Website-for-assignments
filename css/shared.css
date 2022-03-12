@@ -130,14 +130,6 @@ Responsive Table
     width: 100%;
 }
 
-/* Navigation bar styling */
-/* .heading{
-    text-align: center;
-    text-transform: uppercase;
-    padding-bottom: 3.5rem;
-    font-size: 4rem;
-} */
-
 .header{
     background: var(--iceCreamCone);
     display: flex;
@@ -379,7 +371,7 @@ Footer styling
 .introduction__paragraph{
     text-align: center;
     word-break: normal;
-    white-space: n ormal;
+    white-space: normal;
     color: black;
     background: var(--iceCreamCone);
     margin-top: 5rem;
@@ -420,4 +412,50 @@ Footer styling
     80%{color: DeepPink;}
     90%{color: DodgerBlue;}
     100%{color: orange;}
+}
+
+.website-styler{
+    position: absolute;
+    bottom: 5em;
+    font: 1rem white;
+    background: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.website-styler form{
+    position: relative;
+    background-color: var(--iceCreamCone);
+    max-width: 45rem;
+}
+
+
+.website-styler .form__row{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.website-styler .form__label{
+    width: 50%;
+    text-align: right;
+    padding-right: 1em;
+}
+
+.website-styler .form__input {
+    width: 50%;
+    display: inline-block;
+}
+.website-styler fieldset{
+    width: 100%;
+}
+.website-styler legend{
+    text-align: center;
+    width: 100%;
+}
+
+.website-styler .form__submitbtn{
+    align-self: center;
 }
