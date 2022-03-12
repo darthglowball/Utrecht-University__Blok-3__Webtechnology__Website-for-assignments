@@ -84,7 +84,7 @@
 
 #shopping-basket {
     position: sticky;
-    display: block;
+    display: flex;
     bottom: 0;
     height: auto;
     background-color: yellow;
@@ -101,10 +101,6 @@
     display: inline;
     margin: 0.5rem;
     overflow: scroll;
-}
-
-#shopping-basket__controls {
-    display: inline;
 }
 
 #shopping-basket__order-button {
