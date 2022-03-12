@@ -1,5 +1,5 @@
-let $ = id => document.getElementById(id)
-let $$ = selector => document.querySelector(selector)
+let $ = id => document.getElementById(id);
+let $$ = selector => document.querySelector(selector);
 
 class Menu { // Singleton container for MenuSection.
     static data = [];
@@ -48,7 +48,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         description.appendChild(document.createTextNode(descriptionText));
         allergies.appendChild(document.createTextNode("Allergies: "));
         let portionSelector = document.createElement("div");
-        this.createPortionSelector(portionSelector);
+        this.presentPortionSelector(portionSelector);
         this.presentAllergies(allergies);
         this.presentation.appendChild(icon);
         this.presentation.appendChild(description);
@@ -73,7 +73,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         };
     };
 
-    createPortionSelector(parent){
+    presentPortionSelector(parent){
         parent.className = "portion-selector";
         let minusButton = document.createElement("button");
         let plusButton = document.createElement("button");
