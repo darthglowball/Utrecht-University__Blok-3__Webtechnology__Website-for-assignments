@@ -31,7 +31,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
     presentation = document.createElement("article");
     constructor(data){
         this.data = data;
-        this.presentation.className = "card " + this.data.constructor.name + "__" + this.data.name;
+        this.presentation.className = "card " + this.data.constructor.name + "__" + this.data.name.replace(" ", "-");
         let icon = document.createElement("img")
         let description = document.createElement("p")
         let allergies = document.createElement("p")
