@@ -37,7 +37,6 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         let allergies = document.createElement("p")
         let allergy = document.createElement("p")
         icon.setAttribute("src", "./images/" + this.data.icon + ".png")
-        alert(this.data.name)
         let description_text = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match) // Replaces CamelCase with spaces.
         icon.setAttribute("alt", description_text);
         description.appendChild(document.createTextNode(description_text))
