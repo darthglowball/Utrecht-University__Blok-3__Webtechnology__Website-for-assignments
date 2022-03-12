@@ -19,8 +19,8 @@ class MenuSection {
         let title = document.createElement("h2");
         title.className = "menu-section__title";
         title.appendChild(document.createTextNode(name + "s"));
-        parent.insertBefore(title,sibling);
-        parent.insertBefore(this.presentation,sibling);
+        parent.insertBefore(title, sibling);
+        parent.insertBefore(this.presentation, sibling);
         Menu.data.push(this);
     };
 };
