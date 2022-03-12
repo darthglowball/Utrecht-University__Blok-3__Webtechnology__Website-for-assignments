@@ -13,7 +13,7 @@ function updateShoppingBasket(foodItem){
         icon.className = "portion-indicator";
         portionIndicator.appendChild(document.createTextNode(foodItem.data.portion + "x"));
         boughtItem.classList[0] = "shopping-basket__bought-item";
-        boughtItem.classList[1] = food_item.presentation.classList[1];
+        boughtItem.classList[1] = foodItem.presentation.classList[1];
         $("shopping-basket__bought-container").appendChild(boughtItem);
     }
 }
