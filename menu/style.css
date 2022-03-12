@@ -30,6 +30,11 @@
     background-color: rgb(110, 84, 255);
 }
 
+.menu-section {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .menu-section .card {
     border-radius: 1.5rem;
     opacity: 0.8;
