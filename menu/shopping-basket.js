@@ -3,10 +3,13 @@ $("shopping-basket__order-button").addEventListener("click", ()=> alert("order p
 function updateShoppingBasket(foodItem){
     let boughtItem = $$("#shopping-basket__bought-container ." + foodItem.presentation.classList[1]);
     if (boughtItem){
-        let portionIndicator = boughtItem.querySelector(".portion-indicator");
-        portionIndicator.textContent = foodItem.data.portions + "x";
+        if (foodItem.data.portions > 0){
+            let portionIndicator = boughtItem.querySelector(".portion-indicator");
+            portionIndicator.textContent = foodItem.data.portions + "x";
+        } else {
+            boughtItem.remove();
+        }
     } else {
-        $("shopping-basket__bought-container").textContent = "";
         let boughtItem = document.createElement("div");
         let icon = foodItem.icon.cloneNode();
         let portionIndicator = document.createElement("div");
@@ -17,5 +20,10 @@ function updateShoppingBasket(foodItem){
         boughtItem.appendChild(icon);
         boughtItem.appendChild(portionIndicator);
         $("shopping-basket__bought-container").appendChild(boughtItem);
+    }
+    if ($("shopping-basket__bought-container").childElementCount === 0){
+        $("shopping-basket__bought-container").textContent = "";
+    } else {
+        $("shopping-basket__bought-container").textContent = "Your basket is empty. Click on a food item's + to fill up your basket.";
     }
 }
