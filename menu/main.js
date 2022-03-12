@@ -34,7 +34,7 @@ new MenuSection("Hamburger");
 
 
 class FoodSection { // Presentation (& handler) of a Food derivative. Do not instantiate it.
-    static dot_choices = {"milk" : "red", "nuts" : "green", "gluten" : "yellow", "fruit" : "blue"}
+    static dotChoices = {"milk" : "red", "nuts" : "green", "gluten" : "yellow", "fruit" : "blue"}
     data = null;
     presentation = document.createElement("article");
     constructor(data){
@@ -44,9 +44,9 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         let description = document.createElement("p");
         let allergies = document.createElement("p");
         icon.setAttribute("src", "./images/" + this.data.icon);
-        let description_text = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
-        icon.setAttribute("alt", description_text);
-        description.appendChild(document.createTextNode(description_text));
+        let descriptionText = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
+        icon.setAttribute("alt", descriptionText);
+        description.appendChild(document.createTextNode(descriptionText));
         allergies.appendChild(document.createTextNode("Allergies: "));
         let portionSelector = document.createElement("div");
         this.createPortionSelector(portionSelector);
@@ -64,9 +64,9 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         }
         for (let allergy of this.data.allergies){
             let dot = document.createElement("span");
-            let dot_color = this.constructor.dot_choices[allergy];
-            if (dot_color){ // if a valid color was matched with an allergy.
-                dot.className = "dot dot__" + dot_color;
+            let dotColor = this.constructor.dotChoices[allergy];
+            if (dotColor){ // if a valid color was matched with an allergy.
+                dot.className = "dot dot__" + dotColor;
                 parent.appendChild(dot);
             } else {
                 console.log("Warning: allergy_dot could not be matched with a color.");
@@ -100,10 +100,10 @@ class Food { // Data singleton. This is for shared properties. Do not instantiat
     name = ""
     amount = 0;
     stock = 0;
-    presentation_handler = null;
+    presentationHandler = null;
     constructor(name, allergies, icon, price, stock){
         [this.name, this.allergies, this.icon, this.price, this.stock] = [name, allergies, icon, price, stock];
-        this.presentation_handler = new FoodSection(this); // Pass Data to Presentation layer.
+        this.presentationHandler = new FoodSection(this); // Pass Data to Presentation layer.
         MenuSection.data.push(this);
     };
 };
