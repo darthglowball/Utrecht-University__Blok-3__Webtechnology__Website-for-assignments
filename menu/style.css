@@ -48,6 +48,9 @@
     display: block;
     text-align: center;
     margin-top: 1.5em;
+    background-color:rgb(255, 211, 66);
+    border: 0.1em solid red;
+    border-radius: 1em 1em 0em 0em;
 }
 
 .ingredients-overview .row .introduction__paragraph{
