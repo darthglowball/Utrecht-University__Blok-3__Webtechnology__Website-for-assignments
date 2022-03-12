@@ -1,6 +1,3 @@
-let $ = id => document.getElementById(id);
-let $$ = selector => document.querySelector(selector);
-
 class Menu { // Singleton container for MenuSection.
     static data = [];
 };
@@ -83,11 +80,11 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         numberOfPortions.appendChild(document.createTextNode("0"));
         plusButton.addEventListener("click", ()=> {
             this.data.amount++;
-            window.updateShoppingBasket(this.data);
+            updateShoppingBasket(this.data);
         });
         minusButton.addEventListener("click", ()=> {
             this.data.amount--;
-            window.updateShoppingBasket(this.data);
+            updateShoppingBasket(this.data);
         });
         parent.appendChild(minusButton);
         parent.appendChild(numberOfPortions);
