@@ -13,6 +13,7 @@ class MenuSection {
         this.presentation = document.createElement("section");
         this.presentation.className = "card-container menu-section";
         this.presentation.id = "menu-section__" + name;
+        this.presentation.appendChild(document.createTextNode(name + "s"))
         $("content-container").appendChild(this.presentation);
         Menu.data.push(this);
     };
