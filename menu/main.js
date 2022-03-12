@@ -37,7 +37,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         let description = document.createElement("p")
         let allergies = document.createElement("p")
         let allergy = document.createElement("p")
-        icon.setAttribute("src", "./images/" + this.data.icon + ".png")
+        icon.setAttribute("src", "./images/" + this.data.icon)
         let description_text = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match) // Replaces CamelCase with spaces.
         icon.setAttribute("alt", description_text);
         description.appendChild(document.createTextNode(description_text))
@@ -95,16 +95,16 @@ class Hamburger extends Food {};
 
 // Food items.
 // Use JSON files for data? Keyword arguments? One object argument?
-new IceCream("Vanilla", ["milk"], "ice-cream_White", "2.35", 100); 
-new IceCream("Hazel", ["milk", "milk"], "ice-cream_Brown", "2.10", 200);
-new IceCream("Pistache", ["milk", "milk"], "ice-cream_Green", "1.20", 130);
-new IceCream("Strawberry Cheesecake", ["milk", "fruit", "gluten"], "ice-cream_Pink", "3.10", 30);
-new IceCream("Blueberry and Raspberry", ["fruit"], "ice-cream_Purple", "2.45", 66);
-new IceCream("Smurf", ["milk"], "ice-cream_Blue", "1.75", 44);
-new IceCream("Brown Butter Pecan", ["milk"], "ice-cream_Orange", "3.25", 238);
-new IceCream("Lime Cheesecake", [], "lime-cone", "1.20", 8);
-new IceCream("Melon Cheesecake", [], "melon-cone", "1.60", 23);
-new IceCream("Cookie", ["milk", "gluten"], "cookie-cone", "1.70", 325);
+new IceCream("Vanilla", ["milk"], "ice-cream_White.png", "2.35", 100); 
+new IceCream("Hazel", ["milk", "milk"], "ice-cream_Brown.png", "2.10", 200);
+new IceCream("Pistache", ["milk", "milk"], "ice-cream_Green.png", "1.20", 130);
+new IceCream("Strawberry Cheesecake", ["milk", "fruit", "gluten"], "ice-cream_Pink.png", "3.10", 30);
+new IceCream("Blueberry and Raspberry", ["fruit"], "ice-cream_Purple.png", "2.45", 66);
+new IceCream("Smurf", ["milk"], "ice-cream_Blue.png", "1.75", 44);
+new IceCream("Brown Butter Pecan", ["milk"], "ice-cream_Orange.png", "3.25", 238);
+new IceCream("Lime Cheesecake", [], "lime-cone.jpg", "1.20", 8);
+new IceCream("Melon Cheesecake", [], "melon-cone.png", "1.60", 23);
+new IceCream("Cookie", ["milk", "gluten"], "cookie-cone.jpg", "1.70", 325);
 
-new Beverage("Coca-Cola", [], "coca-cola", "2.30", 110);
-new Beverage("Fanta Orange", [], "fanta-orange", "2.20", 50);
+new Beverage("Coca-Cola", [], "coca-cola.png", "2.30", 110);
+new Beverage("Fanta Orange", [], "fanta-orange.png", "2.20", 50);
