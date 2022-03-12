@@ -11,7 +11,8 @@ class MenuSection {
     static data = [];
     constructor(name){
         this.presentation = document.createElement("section");
-        this.presentation.className = "card-container menu-section__" + name;
+        this.presentation.className = "card-container";
+        this.presentation.id = "menu-section__" + name;
         $("content-container").appendChild(this.presentation);
         Menu.data.push(this);
     };
@@ -45,7 +46,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         this.presentation.appendChild(icon);
         this.presentation.appendChild(description);
         this.presentation.appendChild(allergies);
-        $$(".menu-section__" + this.data.constructor.name).appendChild(this.presentation);
+        $("menu-section__" + this.data.constructor.name).appendChild(this.presentation);
     };
     
     presentAllergies(parent){
