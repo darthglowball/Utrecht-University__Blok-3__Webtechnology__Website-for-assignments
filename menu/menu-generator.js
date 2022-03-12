@@ -68,7 +68,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
                 dot.className = "dot dot__" + dotColor;
                 parent.appendChild(dot);
             } else {
-                console.log("Warning: allergy_dot could not be matched with a color.");
+                console.log("Warning: allergyDot could not be matched with a color.");
             };
         };
     };
@@ -81,6 +81,14 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         minusButton.appendChild(document.createTextNode("-"));
         plusButton.appendChild(document.createTextNode("+"));
         numberOfPortions.appendChild(document.createTextNode("0"));
+        plusButton.addEventListener("click", ()=> {
+            this.data.amount++;
+            window.updateShoppingBasket(this.data);
+        });
+        minusButton.addEventListener("click", ()=> {
+            this.data.amount--;
+            window.updateShoppingBasket(this.data);
+        });
         parent.appendChild(minusButton);
         parent.appendChild(numberOfPortions);
         parent.appendChild(plusButton);
