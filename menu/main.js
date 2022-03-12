@@ -13,7 +13,10 @@ class MenuSection {
         this.presentation = document.createElement("section");
         this.presentation.className = "card-container menu-section";
         this.presentation.id = "menu-section__" + name;
-        this.presentation.appendChild(document.createTextNode(name + "s"))
+        let title = document.createElement("h2");
+        title.className = "menu-section__title"
+        title.appendChild(document.createTextNode(name + "s"));
+        this.presentation.appendChild(title)
         $("content-container").appendChild(this.presentation);
         Menu.data.push(this);
     };
@@ -69,7 +72,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
 
 
 
-class Food { // Data singleton. Do not instantiate it.
+class Food { // Data singleton. This is for shared properties. Do not instantiate it.
     price = 0;
     icon = "";
     calories = 0;

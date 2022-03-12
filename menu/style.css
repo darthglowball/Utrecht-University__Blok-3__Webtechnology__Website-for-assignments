@@ -43,6 +43,10 @@
     margin: 0.5rem 0;   
 }
 
+.menu-section__title {
+    font-size: 3em;
+    display: block;
+}
 
 .ingredients-overview .row .introduction__paragraph{
     margin: 5rem;
