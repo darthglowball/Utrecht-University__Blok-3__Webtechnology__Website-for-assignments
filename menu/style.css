@@ -30,6 +30,12 @@
     background-color: rgb(110, 84, 255);
 }
 
+.menu-section {
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: 0 0 0.7rem black;
+}
+
 .menu-section .card {
     border-radius: 1.5rem;
     opacity: 0.8;
@@ -54,9 +60,32 @@
     padding: 0em 1em;
 }
 
+.menu-section__title {
+    font-size: 3em;
+    display: block;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    color: white;
+    -webkit-text-stroke: 0.04em black;
+    box-shadow: 0 0 0.7rem black;
+    background-color:rgb(255, 211, 66);
+    border: 0.1em solid red;
+    border-radius: 1em 1em 0em 0em;
+    z-index: 100;
+}
+
 .portion-selector p{
     padding: 0em 1em;
 }
 .ingredients-overview .row .introduction__paragraph{
     margin: 5rem;
+}
+
+#shopping-basket {
+    position: sticky;
+    display: block;
+    bottom: 0;
+    height: 4rem;
+    background-color: yellow;
 }
