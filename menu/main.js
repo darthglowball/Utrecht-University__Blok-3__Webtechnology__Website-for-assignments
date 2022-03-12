@@ -10,11 +10,13 @@ class Menu { // Singleton container for MenuSection.
 class MenuSection {
     static data = [];
     constructor(name){
+        let parent = document.getElementById("content-container");
+        let sibling = document.getElementsByClassName("ingredients-overview")[0];
         this.presentation = document.createElement("section");
         this.presentation.className = "card-container menu-section";
         this.presentation.id = "menu-section__" + name;
         this.presentation.appendChild(document.createTextNode(name + "s"))
-        $("content-container").appendChild(this.presentation);
+        parent.insertBefore(this.presentation,sibling);
         Menu.data.push(this);
     };
 };
@@ -37,7 +39,8 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         let icon = document.createElement("img")
         let description = document.createElement("p")
         let allergies = document.createElement("p")
-        let allergy = document.createElement("p")
+        let portionSelector = document.createElement("div");
+        this.createPortionSelector(portionSelector);
         icon.setAttribute("src", "./images/" + this.data.icon)
         let description_text = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match) // Replaces CamelCase with spaces.
         icon.setAttribute("alt", description_text);
@@ -47,6 +50,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         this.presentation.appendChild(icon);
         this.presentation.appendChild(description);
         this.presentation.appendChild(allergies);
+        this.presentation.appendChild(portionSelector);
         $("menu-section__" + this.data.constructor.name).appendChild(this.presentation);
     };
     
@@ -65,6 +69,21 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
             }
         };
     };
+
+    createPortionSelector(parent){
+        parent.className = "portion-selector";
+        let minusButton = document.createElement("button");
+        let plusButton = document.createElement("button");
+        let numberOfPortions = document.createElement("p");
+        minusButton.appendChild(document.createTextNode("-"));
+        plusButton.appendChild(document.createTextNode("+"));
+        numberOfPortions.appendChild(document.createTextNode("0"));
+        parent.appendChild(minusButton);
+        parent.appendChild(numberOfPortions);
+        parent.appendChild(plusButton);
+    };
+
+
 };
 
 
@@ -98,7 +117,7 @@ class Hamburger extends Food {};
 // Use JSON files for data? Keyword arguments? One object argument?
 new IceCream("Vanilla", ["milk"], "ice-cream_White.png", "2.35", 100); 
 new IceCream("Hazel", ["milk", "milk"], "ice-cream_Brown.png", "2.10", 200);
-new IceCream("Pistache", ["milk", "milk"], "ice-cream_Green.png", "1.20", 130);
+new IceCream("Pistache", ["milk", "nuts"], "ice-cream_Green.png", "1.20", 130);
 new IceCream("Strawberry Cheesecake", ["milk", "fruit", "gluten"], "ice-cream_Pink.png", "3.10", 30);
 new IceCream("Blueberry and Raspberry", ["fruit"], "ice-cream_Purple.png", "2.45", 66);
 new IceCream("Smurf", ["milk"], "ice-cream_Blue.png", "1.75", 44);
