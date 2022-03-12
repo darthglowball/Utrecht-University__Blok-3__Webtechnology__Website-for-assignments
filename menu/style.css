@@ -107,5 +107,8 @@
 #shopping-basket__order-button {
     display: block;
     padding: 0.5rem;
+    margin: 0.5rem;
+    border: 0.1rem solid black;
+    border-radius: 0.1rem;
     font-size: 1.5rem;
 }
