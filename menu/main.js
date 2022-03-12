@@ -48,6 +48,8 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         icon.setAttribute("alt", description_text);
         description.appendChild(document.createTextNode(description_text));
         allergies.appendChild(document.createTextNode("Allergies: "));
+        let portionSelector = document.createElement("div");
+        this.createPortionSelector(portionSelector);
         this.presentAllergies(allergies);
         this.presentation.appendChild(icon);
         this.presentation.appendChild(description);
