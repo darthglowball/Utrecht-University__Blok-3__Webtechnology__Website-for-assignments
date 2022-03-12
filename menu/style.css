@@ -93,4 +93,5 @@
 
 #shopping-basket__bought-container{
     margin: 0.5rem;
+    overflow: scroll;
 }
