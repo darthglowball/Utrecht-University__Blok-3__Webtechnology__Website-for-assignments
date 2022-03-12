@@ -91,6 +91,11 @@
     border: 0.1rem solid black;
 }
 
+#shopping-basket__icon {
+    width: 5rem;
+    height: 5rem;
+}
+
 #shopping-basket__bought-container{
     margin: 0.5rem;
     overflow: scroll;
