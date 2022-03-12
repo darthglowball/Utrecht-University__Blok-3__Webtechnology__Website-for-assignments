@@ -67,3 +67,11 @@
 .ingredients-overview .row .introduction__paragraph{
     margin: 5rem;
 }
+
+#shopping-basket {
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    height: 4rem;
+    background-color: yellow;
+}
