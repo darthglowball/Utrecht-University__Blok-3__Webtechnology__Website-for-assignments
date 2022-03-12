@@ -33,7 +33,7 @@
 .menu-section {
     margin-top: 0;
     margin-bottom: 0;
-    box-shadow: 0 0 0.2em black;
+    box-shadow: 0 0 0.2rem black;
 }
 
 .menu-section .card {
@@ -57,7 +57,7 @@
     margin-bottom: 0;
     color: white;
     -webkit-text-stroke: 0.04em black;
-    box-shadow: 0 0 0.2em black;
+    box-shadow: 0 0 0.2rem black;
     background-color:rgb(255, 211, 66);
     border: 0.1em solid red;
     border-radius: 1em 1em 0em 0em;
