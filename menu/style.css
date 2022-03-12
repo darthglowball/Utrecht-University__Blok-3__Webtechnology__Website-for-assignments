@@ -117,6 +117,11 @@
     font-size: 1.5rem;
 }
 
+.shopping-basket__bought-item {
+    width: 4rem;
+    height: 4rem;
+}
+
 .shopping-basket__bought-item .icon, .shopping-basket__bought-item .portion-indicator {
     position: absolute;
     width: 100%;
