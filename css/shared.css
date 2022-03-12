@@ -422,7 +422,10 @@ Footer styling
     width: 100%;
     display: flex;
     justify-content: center;
+}
 
+.website-styler--hidden{
+    display: none;
 }
 
 .website-styler form{

@@ -81,9 +81,17 @@ function changeStyle(e){
         allSelectedElements[i].style.borderRadius = borderRadius;
         allSelectedElements[i].style.borderColor = borderColor;
         allSelectedElements[i].style.backgroundColor = backgroundColor;
-    }
-}
+    };
+};
 
+document.querySelector(".changeAppearenceBtn").addEventListener("click",changeStylerFormsVisibility);
+var stylingFormVisibility = false;
+
+function changeStylerFormsVisibility(e){
+    e.preventDefault();
+    console.log("hoi ik werk");
+    document.querySelector(".website-styler").classList.toggle("website-styler--hidden");
+}
 
 
 
