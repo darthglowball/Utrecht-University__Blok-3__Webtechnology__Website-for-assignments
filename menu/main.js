@@ -37,15 +37,15 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
     constructor(data){
         this.data = data;
         this.presentation.className = "card " + this.data.constructor.name + "__" + this.data.name.replace(" ", "-");
-        let icon = document.createElement("img")
-        let description = document.createElement("p")
-        let allergies = document.createElement("p")
-        let allergy = document.createElement("p")
-        icon.setAttribute("src", "./images/" + this.data.icon)
-        let description_text = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match) // Replaces CamelCase with spaces.
+        let icon = document.createElement("img");
+        let description = document.createElement("p");
+        let allergies = document.createElement("p");
+        let allergy = document.createElement("p");
+        icon.setAttribute("src", "./images/" + this.data.icon);
+        let description_text = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
         icon.setAttribute("alt", description_text);
-        description.appendChild(document.createTextNode(description_text))
-        allergies.appendChild(document.createTextNode("Allergies: "))
+        description.appendChild(document.createTextNode(description_text));
+        allergies.appendChild(document.createTextNode("Allergies: "));
         this.presentAllergies(allergies);
         this.presentation.appendChild(icon);
         this.presentation.appendChild(description);
@@ -65,7 +65,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
                 parent.appendChild(dot);
             } else {
                 console.log("Warning: allergy_dot could not be matched with a color.");
-            }
+            };
         };
     };
 };
