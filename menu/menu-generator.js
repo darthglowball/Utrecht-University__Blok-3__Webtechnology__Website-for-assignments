@@ -15,7 +15,6 @@ class MenuSection {
         this.presentation = document.createElement("section");
         this.presentation.className = "card-container menu-section";
         this.presentation.id = "menu-section__" + name;
-        this.presentation.appendChild(document.createTextNode(name + "s"))
         let title = document.createElement("h2");
         title.className = "menu-section__title";
         title.appendChild(document.createTextNode(name + "s"));
