@@ -102,6 +102,8 @@
     margin: 0.5rem;
     overflow: scroll;
     background-color: gray;
+    color: white;
+    font-size: 5rem;
 }
 
 #shopping-basket__order-button {
