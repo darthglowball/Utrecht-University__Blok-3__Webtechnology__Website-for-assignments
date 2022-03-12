@@ -56,6 +56,7 @@
     margin-bottom: 0;
     color: white;
     -webkit-text-stroke: 0.1em black;
+    text-shadow: 0 0 0.1em #000;
     background-color:rgb(255, 211, 66);
     border: 0.1em solid red;
     border-radius: 1em 1em 0em 0em;
