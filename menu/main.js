@@ -50,9 +50,12 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
     };
     
     presentAllergies(parent){
+        if (this.data.allergies.length === 0){
+            parent.appendChild(document.createTextNode("none"));
+        }
         for (let allergy of this.data.allergies){
             let dot = document.createElement("span");
-            let dot_color = this.constructor.dot_choices[allergy]
+            let dot_color = this.constructor.dot_choices[allergy];
             if (dot_color){ // if a valid color was matched with an allergy.
                 dot.className = "dot dot__" + dot_color;
                 parent.appendChild(dot);
