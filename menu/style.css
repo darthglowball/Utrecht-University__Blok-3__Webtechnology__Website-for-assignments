@@ -86,6 +86,11 @@
     position: sticky;
     display: block;
     bottom: 0;
-    height: 4rem;
+    height: 6rem;
     background-color: yellow;
+    border: 0.1rem solid black;
+}
+
+#shopping-basket__bought{
+    margin: 0.5rem;
 }
