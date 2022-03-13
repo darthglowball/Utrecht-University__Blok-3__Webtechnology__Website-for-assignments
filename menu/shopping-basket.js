@@ -8,7 +8,7 @@ function updateShoppingBasket(foodItem){
     $("shopping-basket__total").textContent = "";
     $("shopping-basket__total").appendChild(document.createTextNode("Total portions: " + totalPortions));
     $("shopping-basket__total").appendChild(document.createElement("br"));
-    $("shopping-basket__total").appendChild(document.createTextNode("Total price: " + totalPrice.toFixed(2)));
+    $("shopping-basket__total").appendChild(document.createTextNode("Total price: $" + totalPrice.toFixed(2)));
     if (boughtItem){
         if (foodItem.data.portions > 0){
             let portionIndicator = boughtItem.querySelector(".portion-indicator");
