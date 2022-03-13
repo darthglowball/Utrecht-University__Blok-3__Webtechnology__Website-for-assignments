@@ -121,6 +121,7 @@
     width: 5rem;
     height: 5rem;
     position: relative;
+    flex-shrink: 0;
 }
 
 #shopping-basket__total {
