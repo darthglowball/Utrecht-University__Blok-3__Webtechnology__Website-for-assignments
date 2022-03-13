@@ -124,8 +124,14 @@
 }
 
 #shopping-basket__total {
-    text-align: center;
     font-size: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: 0.1rem solid red;
+    background: white;
 }
 
 .shopping-basket__bought-item .icon, .shopping-basket__bought-item .portion-indicator {
