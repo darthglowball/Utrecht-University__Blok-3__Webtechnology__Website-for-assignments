@@ -46,8 +46,8 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         this.presentIcon(this.icon, descriptionText);
         this.presentPortionSelector(portionSelector);
         this.presentDescription(description, descriptionText);
-        this.presentAllergies(allergies);
         this.presentPrice(price);
+        this.presentAllergies(allergies);
         $("menu-section__" + this.data.constructor.name).appendChild(this.presentation);
     };
     
