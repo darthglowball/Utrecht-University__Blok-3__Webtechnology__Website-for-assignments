@@ -66,8 +66,9 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         parent.appendChild(document.createTextNode("Price: $" + this.data.price));
         this.presentation.appendChild(parent);
     };
-
+    
     presentAllergies(parent){
+        parent.appendChild(document.createTextNode("Allergies: "));
         if (this.data.allergies.length === 0){
             parent.appendChild(document.createTextNode("none"));
         }
@@ -81,7 +82,6 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
                 console.log("Warning: allergyDot could not be matched with a color.");
             };
         };
-        parent.appendChild(document.createTextNode("Allergies: "));
         this.presentation.appendChild(parent);
     };
 
