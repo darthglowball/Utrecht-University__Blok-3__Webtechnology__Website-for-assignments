@@ -39,24 +39,31 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         this.presentation.className = "card " + this.data.constructor.name + "__" + this.data.name.replace(" ", "-");
         this.icon = document.createElement("img");
         let description = document.createElement("p");
+        let descriptionText = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
         let allergies = document.createElement("p");
         let price = document.createElement("p");
-        this.icon.setAttribute("src", "./images/" + this.data.icon);
-        let descriptionText = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
-        this.icon.setAttribute("alt", descriptionText);
-        description.appendChild(document.createTextNode(descriptionText));
-        allergies.appendChild(document.createTextNode("Allergies: "));
         let portionSelector = document.createElement("div");
+        this.presentIcon(this.icon, descriptionText);
         this.presentPortionSelector(portionSelector);
+        this.presentDescription(description, descriptionText);
         this.presentAllergies(allergies);
         this.presentPrice(price);
-        this.presentation.appendChild(this.icon);
-        this.presentation.appendChild(description);
         $("menu-section__" + this.data.constructor.name).appendChild(this.presentation);
     };
     
+    presentDescription(parent, descriptionText){
+        parent.appendChild(document.createTextNode(descriptionText));
+        this.presentation.appendChild(parent);
+    };
+
+    presentIcon(parent, descriptionText){
+        parent.setAttribute("src", "./images/" + this.data.icon);
+        parent.setAttribute("alt", descriptionText);
+        this.presentation.appendChild(parent);
+    };
+
     presentPrice(parent){
-        parent.appendChild(document.createTextNode("Price: $" + this.data.price))
+        parent.appendChild(document.createTextNode("Price: $" + this.data.price));
         this.presentation.appendChild(parent);
     };
 
@@ -74,6 +81,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
                 console.log("Warning: allergyDot could not be matched with a color.");
             };
         };
+        parent.appendChild(document.createTextNode("Allergies: "));
         this.presentation.appendChild(parent);
     };
 
@@ -104,7 +112,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         parent.appendChild(plusButton);
         this.presentation.appendChild(parent);
     };
-    
+
     updatePortion(presentation, value){
         presentation.textContent = value;
     };
