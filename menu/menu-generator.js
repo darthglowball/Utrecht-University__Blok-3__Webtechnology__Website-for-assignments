@@ -157,7 +157,7 @@ new IceCream("Strawberry Cheesecake", ["milk", "fruit", "gluten"], "ice-cream_Pi
 new IceCream("Blueberry and Raspberry", ["fruit"], "ice-cream_Purple.png", "2.45", 66);
 new IceCream("Smurf", ["milk"], "ice-cream_Blue.png", "1.75", 44);
 new IceCream("Brown Butter Pecan", ["milk"], "ice-cream_Orange.png", "3.25", 238);
-new IceCream("Lime Cheesecake", [], "lime-cone.jpg", "1.20", 8);
+new IceCream("Lime Cheesecake", [], "lime-cone.png", "1.20", 8);
 new IceCream("Melon Cheesecake", [], "melon-cone.png", "1.60", 23);
 new IceCream("Cookie", ["milk", "gluten"], "cookie-cone.jpg", "1.70", 325);
 
