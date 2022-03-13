@@ -40,6 +40,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         this.icon = document.createElement("img");
         let description = document.createElement("p");
         let allergies = document.createElement("p");
+        let price = document.createElement("p");
         this.icon.setAttribute("src", "./images/" + this.data.icon);
         let descriptionText = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
         this.icon.setAttribute("alt", descriptionText);
@@ -48,13 +49,17 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         let portionSelector = document.createElement("div");
         this.presentPortionSelector(portionSelector);
         this.presentAllergies(allergies);
+        this.presentPrice(price);
         this.presentation.appendChild(this.icon);
         this.presentation.appendChild(description);
-        this.presentation.appendChild(allergies);
-        this.presentation.appendChild(portionSelector);
         $("menu-section__" + this.data.constructor.name).appendChild(this.presentation);
     };
     
+    presentPrice(parent){
+        parent.appendChild(document.createTextNode("Price: $" + this.data.price))
+        this.presentation.appendChild(parent);
+    };
+
     presentAllergies(parent){
         if (this.data.allergies.length === 0){
             parent.appendChild(document.createTextNode("none"));
@@ -69,10 +74,9 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
                 console.log("Warning: allergyDot could not be matched with a color.");
             };
         };
+        this.presentation.appendChild(parent);
     };
-    presentPortion(presentation, value){
-        presentation.textContent = value;
-    }
+
     presentPortionSelector(parent){
         parent.className = "portion-selector";
         let minusButton = document.createElement("button");
@@ -84,22 +88,26 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         plusButton.addEventListener("click", ()=> {
             this.data.portions++;
             totalFoodItems++;
-            this.presentPortion(numberOfPortions, this.data.portions);
+            this.updatePortion(numberOfPortions, this.data.portions);
             updateShoppingBasket(this);
         });
         minusButton.addEventListener("click", ()=> {
             if (this.data.portions > 0){
                 this.data.portions--;
                 totalFoodItems--;
-                this.presentPortion(numberOfPortions, this.data.portions);
+                this.updatePortion(numberOfPortions, this.data.portions);
                 updateShoppingBasket(this);
             }
         });
         parent.appendChild(minusButton);
         parent.appendChild(numberOfPortions);
         parent.appendChild(plusButton);
+        this.presentation.appendChild(parent);
     };
-
+    
+    updatePortion(presentation, value){
+        presentation.textContent = value;
+    };
 
 };
 
