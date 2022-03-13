@@ -96,7 +96,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
         plusButton.addEventListener("click", ()=> {
             this.data.portions++;
             totalPortions++;
-            totalPrice += this.data.price;
+            totalPrice += parseFloat(this.data.price);
             this.updatePortion(numberOfPortions, this.data.portions);
             updateShoppingBasket(this);
         });
@@ -104,7 +104,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
             if (this.data.portions > 0){
                 this.data.portions--;
                 totalPortions--;
-                totalPrice -= this.data.price;
+                totalPrice -= parseFloat(this.data.price);
                 this.updatePortion(numberOfPortions, this.data.portions);
                 updateShoppingBasket(this);
             }
