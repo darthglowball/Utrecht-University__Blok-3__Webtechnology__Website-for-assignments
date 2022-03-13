@@ -159,7 +159,7 @@ new IceCream("Smurf", ["milk"], "ice-cream_Blue.png", "1.75", 44);
 new IceCream("Brown Butter Pecan", ["milk"], "ice-cream_Orange.png", "3.25", 238);
 new IceCream("Lime Cheesecake", [], "lime-cone.png", "1.20", 8);
 new IceCream("Melon Cheesecake", [], "melon-cone.png", "1.60", 23);
-new IceCream("Cookie", ["milk", "gluten"], "cookie-cone.jpg", "1.70", 325);
+new IceCream("Cookie", ["milk", "gluten"], "cookie-cone.png", "1.70", 325);
 
 new Beverage("Coca-Cola", [], "coca-cola.png", "2.30", 110);
 new Beverage("Fanta Orange", [], "fanta-orange.png", "2.20", 50);
