@@ -4,7 +4,7 @@ $("shopping-basket__order-button").addEventListener("click", ()=> alert("order p
 
 function updateShoppingBasket(foodItem){
     let boughtItem = $$("#shopping-basket__bought-container ." + foodItem.presentation.classList[1]);
-    $("shopping-basket__total").textContent = totalFoodItems;
+    $("shopping-basket__total").textContent = "Total: " + totalFoodItems;
     if (boughtItem){
         if (foodItem.data.portions > 0){
             let portionIndicator = boughtItem.querySelector(".portion-indicator");

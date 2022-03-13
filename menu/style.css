@@ -125,6 +125,7 @@
 
 #shopping-basket__total {
     text-align: center;
+    font-size: 2rem;
 }
 
 .shopping-basket__bought-item .icon, .shopping-basket__bought-item .portion-indicator {
