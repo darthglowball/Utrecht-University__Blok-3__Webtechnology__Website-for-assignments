@@ -5,7 +5,6 @@ function importHTML(code){
     script.parentNode.insertBefore(codeFragment, script);
     while (codeFragment.childNodes.length > 0){
         let item = codeFragment.childNodes[0];
-        console.log(item);
         script.parentNode.insertBefore(item, script);
     };
     codeFragment.remove();
