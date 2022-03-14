@@ -1,3 +1,4 @@
+importHTML(`
 <footer class="footer">
     <div class="website-styler website-styler--hidden">
         <form class="form styler-form">
@@ -67,3 +68,4 @@
         </div>
     </div>
 </footer>
+`)
