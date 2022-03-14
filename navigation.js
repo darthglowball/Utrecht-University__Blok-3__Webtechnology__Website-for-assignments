@@ -1,3 +1,4 @@
+importHTML(`
 <header class="header">
     <a href="" class="logo">
         <img src="../logo.png" alt="company logo: consists of ice cream" >
@@ -14,3 +15,4 @@
         -->
     </nav>
 </header>
+`)
