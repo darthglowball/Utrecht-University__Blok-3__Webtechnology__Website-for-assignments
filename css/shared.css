@@ -78,7 +78,7 @@ Responsive Table
     border-collapse: collapse;
     width: 100%;
     max-width: 100%;
-    padding: 10px;
+    padding: .5em;
     border: 2px dashed red;
     border-radius: 20px;
     background: rgba(0, 229, 255, 0.3);
@@ -92,7 +92,7 @@ Responsive Table
 
 .table .td {
     border-right: 1px solid #f8f8f8;
-    font-size: 12px;
+    font-size: .8em;
 }
 
 .table .thead .th {
@@ -206,7 +206,7 @@ Card layout
 }
 
 #form__submitButton {
-    font-size: 30px;
+    font-size: 2em;
 }
 
 /**
@@ -303,7 +303,7 @@ Footer styling
     background-color: #FBAA76 !important;
     -webkit-text-stroke: 1px black;
     color: yellow;
-    font-size: 25px;
+    font-size: 2.5em;
     font-weight: bold;
 }
 
@@ -392,11 +392,11 @@ Footer styling
 .introduction__paragraph--colorfull {
     align-self: stretch;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    padding: 1em;
     border: 2px dashed blue;
     border-radius: 10px;
     text-shadow: 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black;
-    font-size: 24px;
+    font-size: 1.5em;
     color: rgb(0, 255, 0);
 }
 
@@ -404,7 +404,7 @@ Footer styling
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     background-clip: text;
     color: transparent;
-    font-size: 80px;
+    font-size: 3em;
     animation: rainbow 20s infinite;
     text-shadow: 2px 2px 8px #000000;
 }
