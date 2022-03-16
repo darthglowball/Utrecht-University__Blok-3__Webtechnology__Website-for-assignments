@@ -17,7 +17,7 @@ function registerEvents(e){
     };
     selectContainer.appendChild(selector);
     //Add event listeners to all buttons
-    document.querySelector(".form__submitbtn").addEventListener("click",changeStyle);
+    document.getElementsByClassName("form__submitbtn").addEventListener("click", changeStyling, false);
     document.querySelector(".changeAppearenceBtn").addEventListener("click",changeStylerFormVisibility);
     document.querySelector(".styler-form__closeBtn").addEventListener("click",changeStylerFormVisibility);
 }
@@ -30,15 +30,16 @@ function searchChildren(parent){
         if(!domElements.includes(tagname)){
             domElements.push(tagname);
         };
-    }
+    };
     // Loop through all children to find DOM elements.
     var children = parent.childNodes;
     for (let i = 0; i<children.length; i++){
         searchChildren(children[i]);
-    }
+    };
 };
 
-function changeStyle(e){
+
+function changeStyling(e){
     e.preventDefault();
     //Get all values from the form
     var stylerForm = document.querySelector(".styler-form");
@@ -56,9 +57,8 @@ function changeStyle(e){
         console.log(allSelectedElements[i].tagName);
         allSelectedElements[i].style.color = fontColor;
         allSelectedElements[i].style.fontSize = fontSize;
-        allSelectedElements[i].style.borderSize =borderSize;
+        allSelectedElements[i].style.border = borderSize + " solid " + borderColor;
         allSelectedElements[i].style.borderRadius = borderRadius;
-        allSelectedElements[i].style.borderColor = borderColor;
         allSelectedElements[i].style.backgroundColor = backgroundColor;
     };
 };
