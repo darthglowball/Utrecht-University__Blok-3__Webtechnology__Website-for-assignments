@@ -46,4 +46,8 @@
         right: 0px;
     }
     
+    .website-styler .styler-form fieldset .form__row .form__label{
+        padding: 0.5em 1em;
+        text-align: right;
+    }
 }

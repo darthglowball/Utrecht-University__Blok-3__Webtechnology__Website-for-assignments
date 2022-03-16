@@ -1,4 +1,4 @@
-input, textarea {
+.contact-form input, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -6,11 +6,10 @@ input, textarea {
   resize: vertical;
 }
 
-.form__row {
-    color: black !important;
+.contact-form .form__row {
+    color: black;
 }
 
-.form {
-    
-    width:100%  !important;
+.contact-form {
+    width:100% ;
 }

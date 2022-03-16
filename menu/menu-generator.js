@@ -29,7 +29,7 @@ new MenuSection("Hamburger");
 
 
 
-class FoodSection { // Presentation (& handler) of a Food derivative. Do not instantiate it.
+class FoodSection { // Presentation (& handler) of a Food derivative. Does not instantiate it.
     static dotChoices = {"milk" : "red", "nuts" : "green", "gluten" : "yellow", "fruit" : "blue"}
     data = null;
     icon = null; // shortcut to a node in this.presentation
@@ -123,7 +123,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Do not ins
 
 
 
-class Food { // Data singleton. This is for shared properties. Do not instantiate it.
+class Food { // Data singleton. This is for shared properties. Does not instantiate it.
     price = 0;
     icon = "";
     calories = 0;

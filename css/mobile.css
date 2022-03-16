@@ -48,6 +48,15 @@ side bar*/
     width: 10vmin;
 }
 
+.website-styler .styler-form{
+    padding: 0.5em 1em;
+}
+
+.website-styler .styler-form fieldset .form__row .form__label{
+    padding: 0.5em 0;
+    text-align: center;
+}
+
 
 
 

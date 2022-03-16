@@ -2,14 +2,17 @@ importHTML(`
 <footer class="footer">
     <div class="website-styler website-styler--hidden">
         <form class="form styler-form">
+            <button class="styler-form__closeBtn">X</button>
             <fieldset id="element-selector-field">
-                <label>Select down below the element you would like to style</label>
+                <legend>Select down below the element you would like to style</legend>
             </fieldset>
             <fieldset>
                 <legend>General</legend>
                 <div class="form__row">
                     <label class="form__label" for="backgroundColor">Background color: </label>
-                    <input class="form__input" type="color" name="backgroundColor">
+                    <div class="form__input">
+                        <input type="color" name="backgroundColor">
+                    </div>
                 </div>
             </fieldset>
             <fieldset>
@@ -22,7 +25,9 @@ importHTML(`
                 </div>
                 <div class="form__row">
                     <label class="form__label" for="fontColor">Font color: </label>
-                    <input class="form__input" type="color" name="fontColor">
+                    <div class="form__input">
+                        <input type="color" name="fontColor">
+                    </div>
                 </div>
             </fieldset>
             <fieldset>
@@ -41,10 +46,14 @@ importHTML(`
                 </div>
                 <div class="form__row">
                     <label class="form__label" for="borderColor">Border color: </label>
-                    <input class="form__input" type="color" name="borderColor">
+                    <div class="form__input">
+                        <input type="color" name="borderColor">
+                    </div>
                 </div>
             </fieldset>
-            <button class="form__submitbtn">Submit</button>
+            <div class="form__div-submitbtn">
+                <button class="form__submitbtn">Submit</button>
+            </div>
         </form>
     </div>
     <div class="footer-container">
