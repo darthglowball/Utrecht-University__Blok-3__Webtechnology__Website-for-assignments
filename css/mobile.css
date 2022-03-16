@@ -28,6 +28,7 @@ Navigation bar*/
 
 .header .logo{
     height: 6em;
+    margin: auto;
 }
 
 .header .navbar .navbar__button{
@@ -52,15 +53,16 @@ side bar*/
     width: 10vmin;
 }
 
+
+/* Website styler form */
 .website-styler .styler-form{
     padding: 0.5em 1em;
+    font: 1em;
 }
 
 .website-styler .styler-form fieldset .form__row .form__label{
-    padding: 0.5em 0;
     text-align: center;
 }
-
 
 
 

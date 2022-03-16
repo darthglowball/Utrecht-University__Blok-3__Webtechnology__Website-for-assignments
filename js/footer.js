@@ -6,51 +6,53 @@ importHTML(`
             <fieldset id="element-selector-field">
                 <legend>Select down below the element you would like to style</legend>
             </fieldset>
-            <fieldset>
-                <legend>General</legend>
-                <div class="form__row">
-                    <label class="form__label" for="backgroundColor">Background color: </label>
-                    <div class="form__input">
-                        <input type="color" name="backgroundColor">
+            <div class="form-flex-container">
+                <fieldset>
+                    <legend>General</legend>
+                    <div class="form__row">
+                        <label class="form__label" for="backgroundColor">Background color: </label>
+                        <div class="form__input">
+                            <input type="color" name="backgroundColor">
+                        </div>
                     </div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Font</legend>
-                <div class="form__row">
-                    <label class="form__label" for="fontSize">Font size: </label>
-                    <div class="form__input">
-                        5<input type="range" min="5" max="25" name="fontSize">25
-                    </div> 
-                </div>
-                <div class="form__row">
-                    <label class="form__label" for="fontColor">Font color: </label>
-                    <div class="form__input">
-                        <input type="color" name="fontColor">
+                </fieldset>
+                <fieldset>
+                    <legend>Font</legend>
+                    <div class="form__row">
+                        <label class="form__label" for="fontSize">Font size: </label>
+                        <div class="form__input">
+                            5<input type="range" min="5" max="25" name="fontSize">25
+                        </div> 
                     </div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Border appearence</legend>
-                <div class="form__row">
-                    <label class="form__label" for="borderSize">Border size: </label>
-                    <div class="form__input">
-                        0<input type="range" min="0" max="5" name="borderSize">5
+                    <div class="form__row">
+                        <label class="form__label" for="fontColor">Font color: </label>
+                        <div class="form__input">
+                            <input type="color" name="fontColor">
+                        </div>
                     </div>
-                </div>
-                <div class="form__row">
-                    <label class="form__label"for="borderRadius">Border radius: </label>
-                    <div class="form__input">
-                        0<input type="range" min="0" max="5" name="borderRadius">5
+                </fieldset>
+                <fieldset>
+                    <legend>Border appearence</legend>
+                    <div class="form__row">
+                        <label class="form__label" for="borderSize">Border size: </label>
+                        <div class="form__input">
+                            0<input type="range" min="0" max="25" name="borderSize">25
+                        </div>
                     </div>
-                </div>
-                <div class="form__row">
-                    <label class="form__label" for="borderColor">Border color: </label>
-                    <div class="form__input">
-                        <input type="color" name="borderColor">
+                    <div class="form__row">
+                        <label class="form__label"for="borderRadius">Border radius: </label>
+                        <div class="form__input">
+                            0<input type="range" min="0" max="5" name="borderRadius">5
+                        </div>
                     </div>
-                </div>
-            </fieldset>
+                    <div class="form__row">
+                        <label class="form__label" for="borderColor">Border color: </label>
+                        <div class="form__input">
+                            <input type="color" name="borderColor">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
             <div class="form__div-submitbtn">
                 <button class="form__submitbtn">Submit</button>
             </div>

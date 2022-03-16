@@ -45,9 +45,28 @@
     #decoration__stripRight {
         right: 0px;
     }
+
+    /* Appearence layout */
+    .website-styler .styler-form fieldset .form__row .form__label,
+    .website-styler .styler-form fieldset .form__row .form__input{
+        flex: 1 1 10em;
+        margin: 1em;
+        padding: 1em;
+    }
     
     .website-styler .styler-form fieldset .form__row .form__label{
         padding: 0.5em 1em;
         text-align: right;
     }
+
+    .form__div-submitbtn,
+    #element-selector-field{
+        width: 100%;
+    }
+
+    .website-styler .styler-form fieldset legend{
+        padding: .5em;
+    }
+
+
 }

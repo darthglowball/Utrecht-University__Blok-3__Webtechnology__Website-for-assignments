@@ -92,7 +92,7 @@ Responsive Table
 
 .table .td {
     border-right: 1px solid #f8f8f8;
-    font-size: .8em;
+    font-size: 1.2em;
 }
 
 .table .thead .th {
@@ -447,6 +447,7 @@ Footer styling
 .website-styler .styler-form{
     position: relative;
     width: 90%;
+    margin: 0 auto;
     height: 100%;
     padding: 5%;
     background-color: var(--iceCreamCone);
@@ -464,30 +465,46 @@ Footer styling
     opacity: 0.8;
 }
 
+.website-styler .styler-form .form__selector{
+    margin: .5em;
+}
+.website-styler .styler-form .form-flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .website-styler .styler-form fieldset{
-    margin: 0.5em 0;
+    flex: 1 1 25em;
+    background-color: var(--pistache);
+    margin: 0.5em;
 }
 
 .website-styler .styler-form fieldset legend{
     text-align: center;
+    vertical-align: middle;
+    background-color: var(--pistache);
     width: 100%;
+    padding: .1em;
     font-size: 1.3em;
-    margin-top: 0.2em;
 }
 
 .website-styler .styler-form fieldset .form__row{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    white-space: nowrap;
-    width: 100%;
+    width: auto;
 }
 
 .website-styler .styler-form fieldset .form__row .form__label,
 .website-styler .styler-form fieldset .form__row .form__input{
-    flex: 1 1 30em;
-    max-width: 100%;
+    display: block;
+    width: 15em;
+    margin: 0 auto;
+    padding: .1em;
 }
 
 .website-styler .styler-form fieldset .form__row .form__label{
@@ -495,7 +512,7 @@ Footer styling
 }
 
 .website-styler .styler-form fieldset .form__row input[type="color"]{
-    width: 15em;    
+    width: 15em;
 }
 
 .form__div-submitbtn,
@@ -503,15 +520,19 @@ Footer styling
     display: flex;
     justify-content: center;
 }
+
 .website-styler .form__submitbtn,
 #element-selector-field select{
     justify-content: center;
-    background-color: var(--pistache);
-    width: 10em;
+    width: 15em;
     font-size: 1.5em;
     opacity: 0.9;
 }
 
+.website-styler .form__submitbtn{
+    background-color: var(--pistache);
+    margin: 1em auto;
+}
 .website-styler .form__submitbtn:hover,
 .website-styler .styler-form .styler-form__closeBtn:hover{
     opacity: 1;
