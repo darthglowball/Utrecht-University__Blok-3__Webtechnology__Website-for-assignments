@@ -1,6 +1,5 @@
 var domElements = [];
 var body = document.querySelector("body");
-
 window.addEventListener("load", registerEvents,false);
 
 function registerEvents(e){
@@ -17,10 +16,53 @@ function registerEvents(e){
     };
     selectContainer.appendChild(selector);
     //Add event listeners to all buttons
-    document.querySelector(".form__submitbtn").addEventListener("click", changeStyling, false);
+    document.querySelector(".form__submitbtn").addEventListener("click", changeStyling);
     document.querySelector(".changeAppearenceBtn").addEventListener("click",changeStylerFormVisibility);
     document.querySelector(".styler-form__closeBtn").addEventListener("click",changeStylerFormVisibility);
+    selector.addEventListener("change",onChangeSelectOption);
+    getCurrentStyles("body");
 }
+
+function onChangeSelectOption(e){
+    selectedElement = e.target;
+    getCurrentStyles(selectedElement.value);
+}
+
+function getCurrentStyles(selectedElement){
+    console.log(selectedElement)
+    style = window.getComputedStyle(document.querySelector(selectedElement), null);
+    var backgroundColor = style.backgroundColor;
+    var borderColor = style.borderColor;
+    var borderRadius = style.borderRadius;
+    var borderSize = style.borderSize;
+    var fontColor = style.color;
+    var fontSize = style.fontSize;
+    console.log(fontSize + backgroundColor);
+    var stylerForm = document.querySelector(".styler-form");
+    stylerForm.elements["backgroundColor"].value = rgbToHex(backgroundColor);
+    stylerForm.elements["fontSize"].value = parseInt(fontSize,10);
+    stylerForm.elements["fontColor"].value = rgbToHex(fontColor);
+    stylerForm.elements["borderSize"].value = parseInt(borderSize,10);
+    stylerForm.elements["borderColor"].value = rgbToHex(borderColor);
+    stylerForm.elements["borderRadius"].value = parseInt(borderRadius,10);
+}
+  
+function rgbToHex(input) {
+    let sep = input.indexOf(",") > -1 ? "," : " ";
+    rgb = input.substr(4).split(")")[0].split(sep);
+    let r = (+rgb[0]).toString(16),
+      g = (+rgb[1]).toString(16),
+      b = (+rgb[2]).toString(16);
+
+    if (r.length == 1)
+        r = "0" + r;
+    if (g.length == 1)
+        g = "0" + g;
+    if (b.length == 1)
+        b = "0" + b;
+
+    return "#" + r + g + b;
+  }
 
 function changeStyling(e){
     e.preventDefault();
@@ -38,9 +80,9 @@ function changeStyling(e){
     //Change the style of selected elements
     for(let i = 0; i < allSelectedElements.length; i++){
         allSelectedElements[i].style.color = fontColor;
-        allSelectedElements[i].style.fontSize = fontSize;
-        allSelectedElements[i].style.border = borderSize + " solid " + borderColor;
-        allSelectedElements[i].style.borderRadius = borderRadius;
+        allSelectedElements[i].style.fontSize = fontSize + "px";
+        allSelectedElements[i].style.border = borderSize + "px solid " + borderColor;
+        allSelectedElements[i].style.borderRadius = borderRadius + "px";
         allSelectedElements[i].style.backgroundColor = backgroundColor;
     };
     changeStylerFormVisibility(e);
@@ -62,9 +104,6 @@ function searchChildren(parent){
         searchChildren(children[i]);
     };
 };
-
-
-
 
 function changeStylerFormVisibility(e){
     e.preventDefault();

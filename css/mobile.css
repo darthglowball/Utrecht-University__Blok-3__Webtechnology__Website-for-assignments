@@ -7,11 +7,11 @@ html{
 }
 
 .main{   
-    margin: 9rem 1rem;    
+    margin: 6em 1rem;    
 }
 
 #content-container{
-    margin: 2rem 0rem;
+    margin: 1em 0em;
 }
 
 
@@ -27,13 +27,17 @@ Navigation bar*/
 }
 
 .header .logo{
-    height: 6rem;
+    height: 6em;
 }
 
 .header .navbar .navbar__button{
-    margin: .5rem 1rem;
-    padding: 0.5rem;
-    font-size: 2rem;
+    margin: .25em .5em;
+    padding: 0.25em;
+    font-size: 2em;
+}
+
+.footer{
+    font-size: .5em;
 }
 
 /*

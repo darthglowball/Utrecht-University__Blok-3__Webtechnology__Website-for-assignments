@@ -51,12 +51,12 @@ body{
 }
 
 article{
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: lighter;
 }
 
 section{
-    padding: 2rem 7%;
+    padding: 2em 7%;
 }
 
 /*
@@ -189,13 +189,13 @@ Card layout
 .card-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+    gap: 1.5em;
     background: var(--pistache);
     margin: 1em 0;
 }
 
 .card-container .card{
-    padding: 5rem;
+    padding: 2em;
     text-align: center;
     border: var(--border);
     /* background: var(--pistache); */
@@ -224,12 +224,12 @@ Row layout
 
 .row-container h3{
     width: 100%;
-    font-size: 3rem;
+    font-size: 3em;
 }
 
 .row-container h5{
     width: 100%;
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .row-container .row{
@@ -240,9 +240,10 @@ Row layout
     padding: 1px;
 }
 
+.row-container .row .content,
 .row-container .row .visual{
-    flex: 1 1 30rem;
-    padding: 2rem 1rem;
+    flex: 1 1 30em;
+    padding: 2em 1em;
     max-width: 100%;
 }
 
@@ -251,19 +252,13 @@ Row layout
     height: auto;
 }
 
-.row-container .row .content{
-    flex: 1 1 30rem;
-    padding: 2rem 1rem;
-    max-width: 100%;
-}
-
 .row-container .row .content p{
     text-align: center;
     color: black;
 }
 
 .row .content p{
-    font-size: 1.6rem;
+    font-size: 0.8em;
     color:#ccc;
     padding:1rem 0;
     line-height: 1.8;
@@ -276,9 +271,9 @@ Footer styling
 
 /*Social icons styling*/
 .fa {
-    padding: 1rem;
-    font-size: 2rem;
-    width: 4rem;
+    padding: .5em;
+    font-size: 1em;
+    width: 2em;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
@@ -325,7 +320,7 @@ Footer styling
 }
 
 .changeAppearenceBtn{
-    font-size: 2rem;
+    font-size: 1em;
     padding: 1rem;
     background: blue;
     color: yellow;
@@ -364,19 +359,19 @@ Footer styling
 }
 
 #content-container .introduction .introduction__article{
-    max-width: 60rem;
+    max-width: 30em;
 }
 
 #content-container .introduction .introduction__article h1{
     text-align: center;
     text-transform: uppercase;
-    font-size: 6rem;
+    font-size: 3em;
 }
 
 .introduction__title {
-    margin: 3rem;
+    margin: 1em;
     font-family: Helvetica, sans-serif;
-    font-size: 3rem;
+    font-size: 1.5em;
     text-shadow: 2px 2px 3px red;
     color: yellow;
 }
@@ -387,10 +382,11 @@ Footer styling
     white-space: normal;
     color: black;
     background: var(--iceCreamCone);
-    margin-top: 5rem;
-    padding: 1rem;
+    margin-top: 2em;
+    padding: 2em;
     border-radius: 1.5rem;
     width: 100%;
+    max-width: 30em;
 }
 
 .introduction__paragraph--colorfull {
@@ -432,7 +428,7 @@ Footer styling
 .website-styler{
     position:fixed;
     top: 0;
-    font-size: 1.5rem;
+    font-size: .6em;
     font-family: sans-serif;
     color: black;
     background: none;
@@ -469,14 +465,14 @@ Footer styling
 }
 
 .website-styler .styler-form fieldset{
-    margin: 1em 0;
+    margin: 0.5em 0;
 }
 
 .website-styler .styler-form fieldset legend{
     text-align: center;
     width: 100%;
-    font-size: 1.5em;
-    margin-top: 0.5em;
+    font-size: 1.3em;
+    margin-top: 0.2em;
 }
 
 .website-styler .styler-form fieldset .form__row{
