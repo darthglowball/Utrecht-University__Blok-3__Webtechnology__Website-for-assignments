@@ -171,6 +171,6 @@
 }
 
 .card--selected {
-    color: greenyellow;
-    border: 0.4em dotted red;
+    background-color: greenyellow;
+    border: 1em dotted red;
 }
