@@ -116,7 +116,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
     };
 
     updatePortion(presentation, value){
-        if (value === 0){
+        if (value === 0){ // styling the card as selected when a portion is not zero
             this.presentation.className = this.presentation.className.replace(" card--selected", "");
         } else {
             this.presentation.classList.add("card--selected");
