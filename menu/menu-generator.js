@@ -41,11 +41,13 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
         let descriptionText = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
         let allergies = document.createElement("p");
         let price = document.createElement("p");
+        let stock = document.createElement("p");
         let portionSelector = document.createElement("div");
         this.presentIcon(this.icon, descriptionText);
         this.presentPortionSelector(portionSelector);
         this.presentDescription(description, descriptionText);
         this.presentPrice(price);
+        this.presentStock(stock);
         this.presentAllergies(allergies);
         $("menu-section__" + this.data.constructor.name).appendChild(this.presentation);
     };
@@ -64,6 +66,11 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
 
     presentPrice(parent){
         parent.appendChild(document.createTextNode("Price: $" + this.data.price));
+        this.presentation.appendChild(parent);
+    };
+
+    presentStock(parent){
+        parent.appendChild(document.createTextNode("Stock: " + this.data.stock + " items"));
         this.presentation.appendChild(parent);
     };
     
@@ -94,11 +101,15 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
         plusButton.appendChild(document.createTextNode("+"));
         numberOfPortions.appendChild(document.createTextNode("0"));
         plusButton.addEventListener("click", ()=> {
-            this.data.portions++;
-            totalPortions++;
-            totalPrice += parseFloat(this.data.price);
-            this.updatePortion(numberOfPortions, this.data.portions);
-            updateShoppingBasket(this);
+            if (this.data.portions >= this.data.stock){
+                this.data.portions++;
+                totalPortions++;
+                totalPrice += parseFloat(this.data.price);
+                this.updatePortion(numberOfPortions, this.data.portions);
+                updateShoppingBasket(this);
+            } else {
+                alert("Sorry, but we can't give you more of this food item, because it would exceed our stock!");
+            }
         });
         minusButton.addEventListener("click", ()=> {
             if (this.data.portions > 0){
