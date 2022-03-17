@@ -39,7 +39,7 @@
 html{
     position: relative;
     overflow-x: hidden;
-    scroll-padding-top: 9 rem;
+    scroll-padding-top: 9rem;
     scroll-behavior: smooth;
     transition: .2s linear;
 }
@@ -158,7 +158,7 @@ Responsive Table
     opacity: 1;
     border: 2px outset black;
     border-radius: 5px;
-    word-wrap: keep-all ;
+    word-wrap: normal;
     white-space: nowrap;
 }
 
@@ -336,13 +336,13 @@ Footer styling
     list-style-type: none;
     align-items: center;
     justify-content: flex-end;
-    word-wrap: keep-all ;
+    word-wrap: normal;
     white-space: nowrap;
 }
 
 .header, .footer {
     background-image: url("../rhombus-background.png");
-    background-repeat: repeat-xy;
+    background-repeat: repeat;
     background-size: 5vmin 5vmin;
 }
 
@@ -402,7 +402,7 @@ Footer styling
 
 .introducion__paragraph--rainbow-animation {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-    background-clip: text;
+    background-clip: content-box;
     color: transparent;
     font-size: 3em;
     animation: rainbow 20s infinite;
