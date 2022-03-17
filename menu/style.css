@@ -155,7 +155,8 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    border: 0.1rem solid red;
+    padding: 0.1em;
+    border: 0.1em solid red;
     background: white;
 }
 
