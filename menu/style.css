@@ -31,15 +31,11 @@
 }
 
 #menu-section__Snack .card{
-    background-color: rgb(110, 84, 255);
+    background-color: rgb(233, 173, 43);
 }
 
 #menu-section__Hamburger .card{
-    background-color: rgb(110, 84, 255);
-}
-
-#menu-section__Beverage .card{
-    background-color: rgb(110, 84, 255);
+    background-color: rgb(179, 103, 4);
 }
 
 .menu-section {
@@ -88,10 +84,11 @@
     z-index: 100;
 }
 
-.portion-selector p{
+.portion-selector p {
     padding: 0em 1em;
 }
-.ingredients-overview .row .introduction__paragraph{
+
+.ingredients-overview .row .introduction__paragraph {
     margin: 5rem;
 }
 
@@ -171,6 +168,6 @@
 }
 
 .card--selected {
-    background-color: greenyellow;
-    border: 1em dotted red;
+    background: greenyellow;
+    border: 0.2em dotted red;
 }
