@@ -4,6 +4,10 @@
     margin-top: 20px;
 }
 
+.row .visual iframe{
+    width: 100%;
+}
+
 /* .row-container {
     outline-style: solid;
     outline-color: black;

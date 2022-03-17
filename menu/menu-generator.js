@@ -23,7 +23,7 @@ class MenuSection {
 
 new MenuSection("IceCream");
 new MenuSection("Beverage");
-new MenuSection("Fry");
+new MenuSection("Snack");
 new MenuSection("Salad");
 new MenuSection("Hamburger");
 
@@ -144,7 +144,7 @@ class Food { // Data singleton. This is for shared properties. Does not instanti
 // "IsA" relationship with Food. These can be instantiated.
 class IceCream extends Food {};
 class Beverage extends Food {};
-class Fry extends Food {};
+class Snack extends Food {};
 class Salad extends Food {};
 class Hamburger extends Food {};
 
@@ -157,12 +157,25 @@ new IceCream("Strawberry Cheesecake", ["milk", "fruit", "gluten"], "ice-cream_Pi
 new IceCream("Blueberry and Raspberry", ["fruit"], "ice-cream_Purple.png", "2.45", 66);
 new IceCream("Smurf", ["milk"], "ice-cream_Blue.png", "1.75", 44);
 new IceCream("Brown Butter Pecan", ["milk"], "ice-cream_Orange.png", "3.25", 238);
-new IceCream("Lime Cheesecake", [], "lime-cone.png", "1.20", 8);
-new IceCream("Melon Cheesecake", [], "melon-cone.png", "1.60", 23);
+new IceCream("Lime", [], "lime-cone.png", "1.20", 8);
+new IceCream("Melon", [], "melon-cone.png", "1.60", 23);
 new IceCream("Cookie", ["milk", "gluten"], "cookie-cone.png", "1.70", 325);
 
 new Beverage("Coca-Cola", [], "coca-cola.png", "2.30", 110);
 new Beverage("Fanta Orange", [], "fanta-orange.png", "2.20", 50);
+
+new Snack("Frys",[],"frietje.png","2,50",500);
+new Snack("Frikandel",[],"frikandel.png","2,00",150);
+new Snack("Kroket",["gluten"],"kroket_van_dobben.png","2,50",150);
+new Snack("Cheese Soufle",["gluten","milk"],"kaassouffle.png","2,00",25);
+new Snack("Spring Roll",[],"loempia_deluxe.png","3,00",99);
+
+new Hamburger("Classic Burger",["gluten"],"classic_burger.png","5,00",250);
+new Hamburger("Hamburger Deluxe",["gluten","milk"],"whopper_burger.png","6,00",199);
+new Hamburger("Veggie Burger",["gluten"],"veggie_burger.png","5,50", 99);
+new Hamburger("Cheeseburger",["gluten","milk"],"cheeseburger.png","6,00",199);
+new Hamburger("Bacon Burger",["gluten","milk"],"bacon_burger.png","6,00",199);
+
 
 
 

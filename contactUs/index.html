@@ -1,104 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
-    <title> Delicaato Ice Cream / Contact Us </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/shared.css">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="../js/importer.js"></script>
-</head>
+    <head>
+        <title> Delicaato Ice Cream / Contact Us </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/shared.css">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <script src="../js/importer.js"></script>
+    </head>
 
-<body>
-    <script src="../js/navigation.js"></script>
-    <main class="main">
-        <script src="../js/decoration.js"></script>
-        <div class="main-container">
-            <div id="content-container">
-                <section class="introduction">
-                    <article class="introduction__article">
-                        <h1 class="introduction__title"> 
-                            <u> Contact Us </u>
-                        </h1>
-                        <p class="introduction__paragraph introduction__paragraph--colorfull"> 
-                            We would love to hear from you what you think of us. Feel free to submit any feedback, without that we can not learn.
-                            We also love to hear compliments, so if you enjoyed your ice cream from Delicaato feel free to submit it below. </p>
-                        <p class = "introduction__paragraph">
-                            Below you can find our contact information. You could use the form. We try to respond to you in 2 workdays. 
-                            If you rather hear our voice, you can also call us. Our phonenumbers are in the table below. 
-                        </p>
-                    </article>
-                </section>
-                <section class="row-container">
-                    <div class="row">
-                        <section class="visual">
-                            <img src="./Images/salesman.webp" alt="Picture of Icecream salesman. He has a question mark speech balloon next to his head, symbolizing your question for us."/>
-                        </section>
+    <body>
+        <script src="../js/navigation.js"></script>
+        <main class="main">
+            <script src="../js/decoration.js"></script>
+            <div class="main-container">
+                <div id="content-container">
+                    <section class="introduction">
+                        <article class="introduction__article">
+                            <h1 class="introduction__title"> 
+                                <u> Contact Us </u>
+                            </h1>
+                            <p class="introduction__paragraph introduction__paragraph--colorfull"> 
+                                We would love to hear from you what you think of us. Feel free to submit any feedback, without that we can not learn.
+                                We also love to hear compliments, so if you enjoyed your ice cream from Delicaato feel free to submit it below. </p>
+                            <p class = "introduction__paragraph">
+                                Below you can find our contact information. You could use the form. We try to respond to you in 2 workdays. 
+                                If you rather hear our voice, you can also call us. Our phonenumbers are in the table below. 
+                            </p>
+                        </article>
+                    </section>
+                    <section class="row-container">
+                        <div class="row">
+                            <section class="visual">
+                                <img src="./Images/salesman.webp" alt="Picture of Icecream salesman. He has a question mark speech balloon next to his head, symbolizing your question for us."/>
+                            </section>
+                            <section class="content">
+                                <article>
+                                    <form class="contact-form">
+                                        <div class="form__row">
+                                            <label class="form__label" for="fname">First Name</label>
+                                            <input type="text" id="fname" class="keyboard-focus-no-shadow" name="firstname" placeholder="Your name..">
+                                        </div>
+                                        <div class="form__row">
+                                            <label class="form__label" for="lname">Last Name</label>
+                                            <input type="text" id="lname" class="keyboard-focus-no-shadow" name="lastname" placeholder="Your last name..">
+                                        </div>
+                                        <div class="form__row">
+                                            <label class="form__label" for="email">Your Email </label>
+                                            <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" title="An e-mail is of the form: abcd@provider.domain-suffix (example: abc@gmail.com)." id="email" class="keyboard-focus-no-shadow" name="email" placeholder="Your email..">
+                                        </div>
+                                        <div class="form__row">
+                                            <label class="form__label" for="subject">Subject </label>
+                                            <textarea id="subject" name="subject" class="keyboard-focus-no-shadow" placeholder="Write your message here... the company will read this."
+                                                style="height:200px"></textarea>
+                
+                                        </div>
+                                        <button id="form__submitButton"> Send </button>
+                                    </form>
+                                </article>
+                            </section>
+                        </div>
+                    </section>
+                    <section class="row-container">
                         <section class="content">
-                            <article>
-                                <form class="contact-form">
-                                    <div class="form__row">
-                                        <label class="form__label" for="fname">First Name</label>
-                                        <input type="text" id="fname" class="keyboard-focus-no-shadow" name="firstname" placeholder="Your name..">
-                                    </div>
-                                    <div class="form__row">
-                                        <label class="form__label" for="lname">Last Name</label>
-                                        <input type="text" id="lname" class="keyboard-focus-no-shadow" name="lastname" placeholder="Your last name..">
-                                    </div>
-                                    <div class="form__row">
-                                        <label class="form__label" for="email">Your Email </label>
-                                        <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" title="An e-mail is of the form: abcd@provider.domain-suffix (example: abc@gmail.com)." id="email" class="keyboard-focus-no-shadow" name="email" placeholder="Your email..">
-                                    </div>
-                                    <div class="form__row">
-                                        <label class="form__label" for="subject">Subject </label>
-                                        <textarea id="subject" name="subject" class="keyboard-focus-no-shadow" placeholder="Write your message here... the company will read this."
-                                            style="height:200px"></textarea>
-            
-                                    </div>
-                                    <button alt="Submitbutton contact form" id="form__submitButton"> Send </button>
-                                </form>
-                            </article>
+                            <h3>Contact us via:</h3>
+                            <table class="contactVia table">
+                                <tbody class="tbody">
+                                    <tr class="tr">
+                                        <td class="td">
+                                            <h2> Land-phone: </h2>
+                                        </td>
+                                        <td class="td"> 
+                                            030-382091849 
+                                        </td>
+                                    </tr>
+                                    <tr class="tr">
+                                        <td  class="td">
+                                            <h2> Fax: </h2>
+                                        </td>
+                                        <td class="td"> 022-449281794 </td>
+                                    </tr>
+                                    <tr class="tr">
+                                        <td class="td"> 
+                                            <h2> Whatsapp: </h2> 
+                                        </td>
+                                        <td  class="td"> 06-292184852 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </section>
-                    </div>
-                </section>
-                <section class="row-container">
-                    <section class="content">
-                        <h3>Contact us via:</h3>
-                        <table class="contactVia table">
-                            <tbody class="tbody">
-                                <tr class="tr">
-                                    <td class="td">
-                                        <h2> Land-phone: </h2>
-                                    </td>
-                                    <td class="td"> 
-                                        030-382091849 
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td  class="td">
-                                        <h2> Fax: </h2>
-                                    </td>
-                                    <td class="td"> 022-449281794 </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td class="td"> 
-                                        <h2> Whatsapp: </h2> 
-                                    </td>
-                                    <td  class="td"> 06-292184852 </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <section class="visual">
+                            <!--Insert some kind of image here-->
+                        </section>
                     </section>
-                    <section class="visual">
-                        <!--Insert some kind of image here-->
-                    </section>
-                </section>
+                </div>
             </div>
-        </div>
-    </main>
-    <script src="../js/footer.js"></script>
-    <script src = "../js/form_styler.js"></script>
-</body>
+        </main>
+        <script src="../js/footer.js"></script>
+        <script src = "../js/form_styler.js"></script>
+    </body>
 </html>

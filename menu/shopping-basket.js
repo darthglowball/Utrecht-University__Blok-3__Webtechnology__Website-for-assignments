@@ -19,7 +19,7 @@ function updateShoppingBasket(foodItem){
     } else {
         let boughtItem = document.createElement("div");
         let icon = foodItem.icon.cloneNode();
-        let portionIndicator = document.createElement("div");
+        let portionIndicator = document.createElement("p");
         icon.className = "icon";
         portionIndicator.className = "portion-indicator";
         portionIndicator.appendChild(document.createTextNode(foodItem.data.portions + "x"));

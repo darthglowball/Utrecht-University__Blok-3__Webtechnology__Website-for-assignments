@@ -30,6 +30,20 @@
     background-color: rgb(110, 84, 255);
 }
 
+#menu-section__Snack .card{
+    background-color: rgb(110, 84, 255);
+}
+
+#menu-section__Hamburger .card{
+    background-color: rgb(110, 84, 255);
+}
+
+
+
+#menu-section__Beverage .card{
+    background-color: rgb(110, 84, 255);
+}
+
 .menu-section {
     margin-top: 0;
     margin-bottom: 0;
@@ -102,7 +116,7 @@
     display: flex;
     margin: 0.5rem;
     padding: 0.5rem;
-    overflow: scroll;
+    overflow: auto;
     background-color: gray;
     color: white;
     font-size: 3rem;
@@ -122,6 +136,12 @@
     height: 7rem;
     position: relative;
     flex-shrink: 0;
+}
+
+.shopping-basket__bought-item img{
+    max-width: 100%;
+    height:100%;
+    object-fit: contain;
 }
 
 #shopping-basket__total {
