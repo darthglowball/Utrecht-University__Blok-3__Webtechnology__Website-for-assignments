@@ -66,8 +66,12 @@
 }
 
 .portion-selector button {
-    padding: 0em 2em;
-    border: 0.2em solid black;
+    padding: 0rem 0.3rem;
+    border: 0.05em solid black;
+    font-size: 2em;
+    font-family: monospace;
+    border-radius: 0.2em;
+    white-space: pre;
 }
 
 .portion-selector button:hover {
