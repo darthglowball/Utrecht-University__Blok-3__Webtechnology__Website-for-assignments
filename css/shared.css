@@ -209,7 +209,7 @@ Card layout
     font-size: 2em;
 }
 
-.circle {
+.shadow {
     filter: drop-shadow(0 0 0.75rem white);
 }
 
