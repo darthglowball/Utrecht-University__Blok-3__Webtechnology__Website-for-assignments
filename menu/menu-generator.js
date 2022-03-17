@@ -99,6 +99,8 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
         let numberOfPortions = document.createElement("p");
         minusButton.appendChild(document.createTextNode(" - "));
         plusButton.appendChild(document.createTextNode(" + "));
+        minusButton.setAttribute("title", "decrement the current food item portion");
+        plusButton.setAttribute("title", "increment the current food item portion");
         numberOfPortions.appendChild(document.createTextNode("0"));
         plusButton.addEventListener("click", ()=> {
             if (this.data.portions < this.data.stock){
