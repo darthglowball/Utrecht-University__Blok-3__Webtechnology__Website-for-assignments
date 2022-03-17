@@ -36,7 +36,7 @@ importHTML(`
                     <div class="form__row">
                         <label class="form__label" for="borderSize">Border size: </label>
                         <div class="form__input">
-                            0<input type="range" min="0" max="25" name="borderSize">25
+                            0<input type="range" min="0" max="25" default="0" name="borderSize">25
                         </div>
                     </div>
                     <div class="form__row">
