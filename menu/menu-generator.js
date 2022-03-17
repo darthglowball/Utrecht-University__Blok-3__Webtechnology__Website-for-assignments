@@ -170,14 +170,14 @@ new IceCream({name: "Cookie", allergies: ["milk", "gluten"], icon: "cookie-cone.
 new Beverage({name: "Coca-Cola", allergies: [], icon: "coca-cola.png", price: "2.30", stock: 110});
 new Beverage({name: "Fanta Orange", allergies: [], icon: "fanta-orange.png", price: "2.20", stock: 50});
 
-new Snack({name: "Frys", allergies: [], icon: "frietje.png", price: "2,50", stock:500});
-new Snack({name: "Frikandel", allergies: [], icon: "frikandel.png", price: "2,00", stock:150});
-new Snack({name: "Kroket", allergies: ["gluten"], icon: "kroket_van_dobben.png", price: "2,50", stock:150});
-new Snack({name: "Cheese Soufle", allergies: ["gluten","milk"], icon: "kaassouffle.png", price: "2,00", stock:25});
-new Snack({name: "Spring Roll", allergies: [], icon: "loempia_deluxe.png", price: "3,00", stock:99});
+new Snack({name: "Frys", allergies: [], icon: "frietje.png", price: "2,50", stock: 500});
+new Snack({name: "Frikandel", allergies: [], icon: "frikandel.png", price: "2,00", stock: 150});
+new Snack({name: "Kroket", allergies: ["gluten"], icon: "kroket_van_dobben.png", price: "2,50", stock: 150});
+new Snack({name: "Cheese Soufle", allergies: ["gluten","milk"], icon: "kaassouffle.png", price: "2,00", stock: 25});
+new Snack({name: "Spring Roll", allergies: [], icon: "loempia_deluxe.png", price: "3,00", stock: 99});
 
-new Hamburger({name: "Classic Burger", allergies: ["gluten"], icon: "classic_burger.png", price: "5,00", stock:250});
-new Hamburger({name: "Hamburger Deluxe", allergies: ["gluten","milk"], icon: "whopper_burger.png", price: "6,00", stock:199});
+new Hamburger({name: "Classic Burger", allergies: ["gluten"], icon: "classic_burger.png", price: "5,00", stock: 250});
+new Hamburger({name: "Hamburger Deluxe", allergies: ["gluten","milk"], icon: "whopper_burger.png", price: "6,00", stock: 199});
 new Hamburger({name: "Veggie Burger", allergies: ["gluten"], icon: "veggie_burger.png", price: "5,50", stock: 99});
-new Hamburger({name: "Cheeseburger", allergies: ["gluten","milk"], icon: "cheeseburger.png", price: "6,00", stock:199});
-new Hamburger({name: "Bacon Burger", allergies: ["gluten","milk"], icon: "bacon_burger.png", price: "6,00", stock:199});
+new Hamburger({name: "Cheeseburger", allergies: ["gluten","milk"], icon: "cheeseburger.png", price: "6,00", stock: 199});
+new Hamburger({name: "Bacon Burger", allergies: ["gluten","milk"], icon: "bacon_burger.png", price: "6,00", stock: 199});
