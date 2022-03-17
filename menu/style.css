@@ -169,5 +169,5 @@
 
 .card--selected {
     background: greenyellow !important;
-    border: 0.2em dotted red !important;
+    outline: 0.2em dotted red !important;
 }
