@@ -59,6 +59,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
         parent.setAttribute("src", "./images/" + this.data.icon);
         parent.setAttribute("alt", descriptionText);
         parent.classList.add("circle");
+        this.presentation.appendChild(shadow);
         this.presentation.appendChild(parent);
     };
 
