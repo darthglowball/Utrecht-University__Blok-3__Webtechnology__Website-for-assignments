@@ -168,6 +168,6 @@
 }
 
 .card--selected {
-    background: greenyellow;
-    border: 0.2em dotted red;
+    background: greenyellow !important;
+    border: 0.2em dotted red !important;
 }
