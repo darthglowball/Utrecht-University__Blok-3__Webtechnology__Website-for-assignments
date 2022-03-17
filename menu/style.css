@@ -70,7 +70,7 @@
     border: 0.2em solid black;
 }
 
-.portion-selector button:hover{
+.portion-selector button:hover {
     background: rgb(19, 165, 209);
 }
 
