@@ -24,7 +24,6 @@ class MenuSection {
 new MenuSection("IceCream");
 new MenuSection("Beverage");
 new MenuSection("Snack");
-new MenuSection("Salad");
 new MenuSection("Hamburger");
 
 
@@ -59,6 +58,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
     presentIcon(parent, descriptionText){
         parent.setAttribute("src", "./images/" + this.data.icon);
         parent.setAttribute("alt", descriptionText);
+        parent.classList.add("circle");
         this.presentation.appendChild(parent);
     };
 
@@ -150,7 +150,6 @@ class Food { // Data singleton. This is for shared properties. Does not instanti
 class IceCream extends Food {};
 class Beverage extends Food {};
 class Snack extends Food {};
-class Salad extends Food {};
 class Hamburger extends Food {};
 
 // Food items.

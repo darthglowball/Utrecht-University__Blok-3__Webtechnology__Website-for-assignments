@@ -10,11 +10,11 @@
     background-color: red;
 }
 
-.dot__green{
+.dot__green {
     background-color: green;
 }
 
-.dot__blue{
+.dot__blue {
     background-color: blue;
 }
 
@@ -22,19 +22,19 @@
     background-color: yellow;
 }
 
-#menu-section__IceCream .card{
+#menu-section__IceCream .card {
     background-color: pink;
 }
 
-#menu-section__Beverage .card{
+#menu-section__Beverage .card {
     background-color: rgb(110, 84, 255);
 }
 
-#menu-section__Snack .card{
+#menu-section__Snack .card {
     background-color: rgb(233, 173, 43);
 }
 
-#menu-section__Hamburger .card{
+#menu-section__Hamburger .card {
     background-color: rgb(179, 103, 4);
 }
 
@@ -53,11 +53,11 @@
     opacity: 1;
 }
 
-.menu-section .card p{
+.menu-section .card p {
     margin: 0.25em 0;   
 }
 
-.portion-selector{
+.portion-selector {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -65,7 +65,7 @@
     height: auto;
 }
 
-.portion-selector button{
+.portion-selector button {
     padding: 0em 1em;
 }
 
@@ -102,7 +102,7 @@
     border: 0.1rem solid black;
 }
 
-#shopping-basket__bought-container{
+#shopping-basket__bought-container {
     flex-basis: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -126,7 +126,7 @@
     font-size: 1.5em;
 }
 
-#shopping-basket__icon{
+#shopping-basket__icon {
     display: block;
     width: 10em;
     height: 10em;
@@ -139,7 +139,7 @@
     flex-shrink: 0;
 }
 
-.shopping-basket__bought-item img{
+.shopping-basket__bought-item img {
     max-width: 100%;
     height:100%;
     object-fit: contain;
