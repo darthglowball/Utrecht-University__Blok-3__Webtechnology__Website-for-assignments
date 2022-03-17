@@ -168,3 +168,8 @@
     top: 0;
     padding-left: .5em;
 }
+
+.card--selected {
+    color: greenyellow;
+    border: 0.4em dotted red;
+}

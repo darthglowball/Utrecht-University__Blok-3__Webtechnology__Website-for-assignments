@@ -116,6 +116,11 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
     };
 
     updatePortion(presentation, value){
+        if (value === 0){
+            this.presentation.className = this.presentation.className.replace(" card--selected", "")
+        } else {
+            this.presentation.classList.push("card--selected");
+        };
         presentation.textContent = value;
     };
 
