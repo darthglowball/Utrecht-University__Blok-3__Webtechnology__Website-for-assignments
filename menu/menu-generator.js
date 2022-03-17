@@ -138,7 +138,7 @@ class Food { // Data singleton. This is for shared properties. Does not instanti
     stock = 0;
     presentationHandler = null;
     constructor(properties){
-        for (key in properties){
+        for (let key in properties){
             this[key] = properties[key];
         };
         this.presentationHandler = new FoodSection(this); // Pass Data to Presentation layer.
