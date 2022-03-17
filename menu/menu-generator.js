@@ -101,7 +101,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
         plusButton.appendChild(document.createTextNode("+"));
         numberOfPortions.appendChild(document.createTextNode("0"));
         plusButton.addEventListener("click", ()=> {
-            if (this.data.portions <= this.data.stock){
+            if (this.data.portions < this.data.stock){
                 this.data.portions++;
                 totalPortions++;
                 totalPrice += parseFloat(this.data.price);
