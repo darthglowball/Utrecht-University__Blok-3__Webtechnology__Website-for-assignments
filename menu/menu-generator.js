@@ -116,6 +116,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
                 }
             }
             if(event.target.classList.contains("plus-button")){
+                console.log("this: ", this);
                 if (this.data.portions < this.data.stock){
                     this.data.portions++;
                     totalPortions++;
