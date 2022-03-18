@@ -218,7 +218,7 @@ Row layout
 */
 
 .row-container {
-    color: #fff;
+    color: rgb(0, 0, 0);
     overflow-wrap: break-word;
     text-align: center;
     white-space: normal;
@@ -238,7 +238,7 @@ Row layout
 
 .row-container .row{
     display: flex;
-    color: rgb(0, 229, 255);
+    color: rgb(0, 0, 0);
     align-items: center;
     flex-wrap: wrap;
     padding: 1px;
