@@ -504,7 +504,8 @@ Footer styling
 }
 
 .website-styler .styler-form fieldset .form__row .form__label,
-.website-styler .styler-form fieldset .form__row .form__input {
+.website-styler .styler-form fieldset .form__row .form__input,
+.form__selector {
     display: block;
     width: 15em;
     margin: 0 auto;
@@ -525,18 +526,15 @@ Footer styling
     justify-content: center;
 }
 
-.website-styler .form__submitbtn,
-#element-selector-field select {
+.website-styler .form__submitbtn{
     justify-content: center;
     width: 15em;
     font-size: 1.5em;
     opacity: 0.9;
-}
-
-.website-styler .form__submitbtn {
     background-color: var(--pistache);
     margin: 1em auto;
 }
+
 .website-styler .form__submitbtn:hover,
 .website-styler .styler-form .styler-form__closeBtn:hover {
     opacity: 1;

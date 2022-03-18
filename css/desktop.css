@@ -30,4 +30,8 @@
     .header .navbar .navbar__button{
         padding: .5em 1em;
     }
+
+    .website-styler .styler-form{
+        padding: 1em;
+    }
 }

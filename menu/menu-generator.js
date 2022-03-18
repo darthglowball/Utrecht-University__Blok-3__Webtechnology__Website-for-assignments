@@ -99,29 +99,35 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
         let numberOfPortions = document.createElement("p");
         minusButton.appendChild(document.createTextNode(" - "));
         plusButton.appendChild(document.createTextNode(" + "));
+        minusButton.className = "minus-button";
+        plusButton.className = "plus-button";
         minusButton.setAttribute("title", "decrement the current food item portion");
         plusButton.setAttribute("title", "increment the current food item portion");
         numberOfPortions.appendChild(document.createTextNode("0"));
-        plusButton.addEventListener("click", ()=> {
-            if (this.data.portions < this.data.stock){
-                this.data.portions++;
-                totalPortions++;
-                totalPrice += parseFloat(this.data.price);
-                this.updatePortion(numberOfPortions, this.data.portions);
-                updateShoppingBasket(this);
-            } else {
-                alert("Sorry, but we can't give you more of this food item, because it would exceed our stock!");
+        parent.addEventListener("click", event => {
+            if(event.target.classList.contains("minus-button")){
+                if (this.data.portions > 0){
+                    this.data.portions--;
+                    totalPortions--;
+                    this.data.stock++;
+                    totalPrice -= parseFloat(this.data.price);
+                    this.updatePortion(numberOfPortions, this.data.portions);
+                    updateShoppingBasket(this);
+                }
             }
-        });
-        minusButton.addEventListener("click", ()=> {
-            if (this.data.portions > 0){
-                this.data.portions--;
-                totalPortions--;
-                totalPrice -= parseFloat(this.data.price);
-                this.updatePortion(numberOfPortions, this.data.portions);
-                updateShoppingBasket(this);
+            if(event.target.classList.contains("plus-button")){
+                if (this.data.portions < this.data.stock){
+                    this.data.portions++;
+                    totalPortions++;
+                    this.data.stock--;
+                    totalPrice += parseFloat(this.data.price);
+                    this.updatePortion(numberOfPortions, this.data.portions);
+                    updateShoppingBasket(this);
+                } else {
+                    alert("Sorry, but we can't give you more of this food item, because it would exceed our stock!");
+                }
             }
-        });
+        })
         parent.appendChild(minusButton);
         parent.appendChild(numberOfPortions);
         parent.appendChild(plusButton);
