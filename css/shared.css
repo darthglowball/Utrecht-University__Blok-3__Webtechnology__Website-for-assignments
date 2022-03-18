@@ -361,6 +361,7 @@ Footer styling
     display: flex;
     background: var(--pistache);
     margin: 1em 0;
+    box-shadow: 0 0 0.7em black;
 }
 
 #content-container .introduction .introduction__article {
@@ -396,7 +397,6 @@ Footer styling
     border-radius: 1.5rem;
     width: 100%;
     max-width: 30em;
-    box-shadow: 0 0 0.7em black;
 }
 
 .introduction__paragraph--colorfull {
