@@ -55,7 +55,8 @@
 
 .menu-section .card p {
     margin: 0.25em 0;
-    -webkit-text-stroke: 0.3em solid black;
+    -webkit-text-stroke: 0.05em black;
+    font-weight: 900;
     color: white;
 }
 
