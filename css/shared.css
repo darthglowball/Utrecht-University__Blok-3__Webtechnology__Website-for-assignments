@@ -224,6 +224,7 @@ Row layout
     white-space: normal;
     background: var(--pistache);
     margin: 1em 0;
+    box-shadow: 0 0 0.7em black;
 }
 
 .row-container h3{
