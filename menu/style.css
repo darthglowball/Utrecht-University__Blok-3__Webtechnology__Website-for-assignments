@@ -49,12 +49,14 @@
     opacity: 0.8;
 }
 
-.menu-section .card:hover{
+.menu-section .card:hover {
     opacity: 1;
 }
 
 .menu-section .card p {
-    margin: 0.25em 0;   
+    margin: 0.25em 0;
+    -webkit-text-stroke: 0.3em solid black;
+    color: white;
 }
 
 .portion-selector {
