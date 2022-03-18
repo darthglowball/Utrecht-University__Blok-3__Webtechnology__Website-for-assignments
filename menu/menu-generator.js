@@ -49,7 +49,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
         this.presentPrice(price);
         this.presentStock(stock);
         this.presentAllergies(allergies);
-        $("menu-section__" + this.data.constructor.name).appendChild(this.presentation);
+        $("menu-section__" + this.data.constructor.name.replace(/[A-Z]/g, match => "-" + match)).appendChild(this.presentation);
     };
     
     presentDescription(parent, descriptionText){
