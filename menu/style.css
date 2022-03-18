@@ -10,11 +10,11 @@
     background-color: red;
 }
 
-.dot__green{
+.dot__green {
     background-color: green;
 }
 
-.dot__blue{
+.dot__blue {
     background-color: blue;
 }
 
@@ -22,24 +22,20 @@
     background-color: yellow;
 }
 
-#menu-section__IceCream .card{
+#menu-section__Ice-Cream .card {
     background-color: pink;
 }
 
-#menu-section__Beverage .card{
+#menu-section__Beverage .card {
     background-color: rgb(110, 84, 255);
 }
 
-#menu-section__Snack .card{
-    background-color: rgb(110, 84, 255);
+#menu-section__Snack .card {
+    background-color: rgb(233, 173, 43);
 }
 
-#menu-section__Hamburger .card{
-    background-color: rgb(110, 84, 255);
-}
-
-#menu-section__Beverage .card{
-    background-color: rgb(110, 84, 255);
+#menu-section__Hamburger .card {
+    background-color: rgb(179, 103, 4);
 }
 
 .menu-section {
@@ -57,11 +53,11 @@
     opacity: 1;
 }
 
-.menu-section .card p{
+.menu-section .card p {
     margin: 0.25em 0;   
 }
 
-.portion-selector{
+.portion-selector {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -69,8 +65,17 @@
     height: auto;
 }
 
-.portion-selector button{
-    padding: 0em 1em;
+.portion-selector button {
+    padding: 0rem 0.3rem;
+    border: 0.05em solid black;
+    font-size: 2em;
+    font-family: monospace;
+    border-radius: 0.2em;
+    white-space: pre;
+}
+
+.portion-selector button:hover, #shopping-basket__order-button:hover {
+    background: rgb(19, 165, 209);
 }
 
 .menu-section__title {
@@ -88,10 +93,11 @@
     z-index: 100;
 }
 
-.portion-selector p{
+.portion-selector p {
     padding: 0em 1em;
 }
-.ingredients-overview .row .introduction__paragraph{
+
+.ingredients-overview .row .introduction__paragraph {
     margin: 5rem;
 }
 
@@ -105,7 +111,7 @@
     border: 0.1rem solid black;
 }
 
-#shopping-basket__bought-container{
+#shopping-basket__bought-container {
     flex-basis: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -129,7 +135,7 @@
     font-size: 1.5em;
 }
 
-#shopping-basket__icon{
+#shopping-basket__icon {
     display: block;
     width: 10em;
     height: 10em;
@@ -142,9 +148,9 @@
     flex-shrink: 0;
 }
 
-.shopping-basket__bought-item img{
+.shopping-basket__bought-item img {
     max-width: 100%;
-    height:100%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -155,7 +161,8 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    border: 0.1rem solid red;
+    padding: 0.5em;
+    border: 0.1em solid red;
     background: white;
 }
 
@@ -167,4 +174,9 @@
     position: absolute;
     top: 0;
     padding-left: .5em;
+}
+
+.card--selected {
+    background: greenyellow !important;
+    outline: 0.2em dotted red !important;
 }

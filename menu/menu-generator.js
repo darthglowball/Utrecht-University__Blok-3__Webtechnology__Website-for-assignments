@@ -11,7 +11,7 @@ class MenuSection {
         let sibling = document.getElementsByClassName("ingredients-overview")[0];
         this.presentation = document.createElement("section");
         this.presentation.className = "card-container menu-section";
-        this.presentation.id = "menu-section__" + name;
+        this.presentation.id = "menu-section__" + name.replace(" ", "-");
         let title = document.createElement("h2");
         title.className = "menu-section__title";
         title.appendChild(document.createTextNode(name + "s"));
@@ -21,10 +21,9 @@ class MenuSection {
     };
 };
 
-new MenuSection("IceCream");
+new MenuSection("Ice Cream");
 new MenuSection("Beverage");
 new MenuSection("Snack");
-new MenuSection("Salad");
 new MenuSection("Hamburger");
 
 
@@ -42,13 +41,15 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
         let descriptionText = this.data.name.replace(/[A-Z]/g, match => " " + match) + " " + this.data.constructor.name.replace(/[A-Z]/g, match => " " + match); // Replaces CamelCase with spaces.
         let allergies = document.createElement("p");
         let price = document.createElement("p");
+        let stock = document.createElement("p");
         let portionSelector = document.createElement("div");
         this.presentIcon(this.icon, descriptionText);
         this.presentPortionSelector(portionSelector);
         this.presentDescription(description, descriptionText);
         this.presentPrice(price);
+        this.presentStock(stock);
         this.presentAllergies(allergies);
-        $("menu-section__" + this.data.constructor.name).appendChild(this.presentation);
+        $("menu-section__" + this.data.constructor.name.replace(/[a-z](?=[A-Z])/g, match => match + "-")).appendChild(this.presentation);
     };
     
     presentDescription(parent, descriptionText){
@@ -59,11 +60,17 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
     presentIcon(parent, descriptionText){
         parent.setAttribute("src", "./images/" + this.data.icon);
         parent.setAttribute("alt", descriptionText);
+        parent.classList.add("shadow");
         this.presentation.appendChild(parent);
     };
 
     presentPrice(parent){
         parent.appendChild(document.createTextNode("Price: $" + this.data.price));
+        this.presentation.appendChild(parent);
+    };
+
+    presentStock(parent){
+        parent.appendChild(document.createTextNode("Stock: " + this.data.stock + " items"));
         this.presentation.appendChild(parent);
     };
     
@@ -90,15 +97,21 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
         let minusButton = document.createElement("button");
         let plusButton = document.createElement("button");
         let numberOfPortions = document.createElement("p");
-        minusButton.appendChild(document.createTextNode("-"));
-        plusButton.appendChild(document.createTextNode("+"));
+        minusButton.appendChild(document.createTextNode(" - "));
+        plusButton.appendChild(document.createTextNode(" + "));
+        minusButton.setAttribute("title", "decrement the current food item portion");
+        plusButton.setAttribute("title", "increment the current food item portion");
         numberOfPortions.appendChild(document.createTextNode("0"));
         plusButton.addEventListener("click", ()=> {
-            this.data.portions++;
-            totalPortions++;
-            totalPrice += parseFloat(this.data.price);
-            this.updatePortion(numberOfPortions, this.data.portions);
-            updateShoppingBasket(this);
+            if (this.data.portions < this.data.stock){
+                this.data.portions++;
+                totalPortions++;
+                totalPrice += parseFloat(this.data.price);
+                this.updatePortion(numberOfPortions, this.data.portions);
+                updateShoppingBasket(this);
+            } else {
+                alert("Sorry, but we can't give you more of this food item, because it would exceed our stock!");
+            }
         });
         minusButton.addEventListener("click", ()=> {
             if (this.data.portions > 0){
@@ -116,6 +129,11 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
     };
 
     updatePortion(presentation, value){
+        if (value === 0){ // styling the card as selected when a portion is not zero.
+            this.presentation.className = this.presentation.className.replace(" card--selected", "");
+        } else {
+            this.presentation.classList.add("card--selected");
+        };
         presentation.textContent = value;
     };
 
@@ -123,7 +141,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
 
 
 
-class Food { // Data singleton. This is for shared properties. Does not instantiate it.
+class Food { // Data singleton. This is for shared properties. Do not instantiate it.
     price = 0;
     icon = "";
     calories = 0;
@@ -132,8 +150,10 @@ class Food { // Data singleton. This is for shared properties. Does not instanti
     portions = 0;
     stock = 0;
     presentationHandler = null;
-    constructor(name, allergies, icon, price, stock){
-        [this.name, this.allergies, this.icon, this.price, this.stock] = [name, allergies, icon, price, stock];
+    constructor(properties){
+        for (let key in properties){
+            this[key] = properties[key];
+        };
         this.presentationHandler = new FoodSection(this); // Pass Data to Presentation layer.
         MenuSection.data.push(this);
     };
@@ -145,38 +165,33 @@ class Food { // Data singleton. This is for shared properties. Does not instanti
 class IceCream extends Food {};
 class Beverage extends Food {};
 class Snack extends Food {};
-class Salad extends Food {};
 class Hamburger extends Food {};
 
 // Food items.
 // Use JSON files for data? Keyword arguments? One object argument?
-new IceCream("Vanilla", ["milk"], "ice-cream_White.png", "2.35", 100); 
-new IceCream("Hazel", ["milk", "milk"], "ice-cream_Brown.png", "2.10", 200);
-new IceCream("Pistache", ["milk", "nuts"], "ice-cream_Green.png", "1.20", 130);
-new IceCream("Strawberry Cheesecake", ["milk", "fruit", "gluten"], "ice-cream_Pink.png", "3.10", 30);
-new IceCream("Blueberry and Raspberry", ["fruit"], "ice-cream_Purple.png", "2.45", 66);
-new IceCream("Smurf", ["milk"], "ice-cream_Blue.png", "1.75", 44);
-new IceCream("Brown Butter Pecan", ["milk"], "ice-cream_Orange.png", "3.25", 238);
-new IceCream("Lime", [], "lime-cone.png", "1.20", 8);
-new IceCream("Melon", [], "melon-cone.png", "1.60", 23);
-new IceCream("Cookie", ["milk", "gluten"], "cookie-cone.png", "1.70", 325);
+new IceCream({name: "Vanilla", allergies: ["milk"], icon: "ice-cream_White.png", price: "2.35", stock: 100}); 
+new IceCream({name: "Hazel", allergies: ["milk", "milk"], icon: "ice-cream_Brown.png", price: "2.10", stock: 200});
+new IceCream({name: "Pistache", allergies: ["milk", "nuts"], icon: "ice-cream_Green.png", price: "1.20", stock: 130});
+new IceCream({name: "Strawberry Cheesecake", allergies: ["milk", "fruit", "gluten"], icon: "ice-cream_Pink.png", price: "3.10", stock: 30});
+new IceCream({name: "Blueberry and Raspberry", allergies: ["fruit"], icon: "ice-cream_Purple.png", price: "2.45", stock: 66});
+new IceCream({name: "Smurf", allergies: ["milk"], icon: "ice-cream_Blue.png", price: "1.75", stock: 44});
+new IceCream({name: "Brown Butter Pecan", allergies: ["milk"], icon: "ice-cream_Orange.png", price: "3.25", stock: 238});
+new IceCream({name: "Lime", allergies: [], icon: "lime-cone.png", price: "1.20", stock: 8});
+new IceCream({name: "Melon", allergies: [], icon: "melon-cone.png", price: "1.60", stock: 23});
+new IceCream({name: "Cookie", allergies: ["milk", "gluten"], icon: "cookie-cone.png", price: "1.70", stock: 325});
 
-new Beverage("Coca-Cola", [], "coca-cola.png", "2.30", 110);
-new Beverage("Fanta Orange", [], "fanta-orange.png", "2.20", 50);
+new Beverage({name: "Coca-Cola", allergies: [], icon: "coca-cola.png", price: "2.30", stock: 110});
+new Beverage({name: "Fanta Orange", allergies: [], icon: "fanta-orange.png", price: "2.20", stock: 50});
+new Beverage({name: "Sprite", allergies: [], icon: "sprite.png", price: "2.00", stock: 5});
 
-new Snack("Frys",[],"frietje.png","2,50",500);
-new Snack("Frikandel",[],"frikandel.png","2,00",150);
-new Snack("Kroket",["gluten"],"kroket_van_dobben.png","2,50",150);
-new Snack("Cheese Soufle",["gluten","milk"],"kaassouffle.png","2,00",25);
-new Snack("Spring Roll",[],"loempia_deluxe.png","3,00",99);
+new Snack({name: "Fries", allergies: [], icon: "frietje.png", price: "2,50", stock: 500});
+new Snack({name: "Frikandel", allergies: [], icon: "frikandel.png", price: "2,00", stock: 150});
+new Snack({name: "Kroket", allergies: ["gluten"], icon: "kroket_van_dobben.png", price: "2,50", stock: 150});
+new Snack({name: "Cheese Soufle", allergies: ["gluten","milk"], icon: "kaassouffle.png", price: "2,00", stock: 25});
+new Snack({name: "Spring Roll", allergies: [], icon: "loempia_deluxe.png", price: "3,00", stock: 99});
 
-new Hamburger("Classic Burger",["gluten"],"classic_burger.png","5,00",250);
-new Hamburger("Hamburger Deluxe",["gluten","milk"],"whopper_burger.png","6,00",199);
-new Hamburger("Veggie Burger",["gluten"],"veggie_burger.png","5,50", 99);
-new Hamburger("Cheeseburger",["gluten","milk"],"cheeseburger.png","6,00",199);
-new Hamburger("Bacon Burger",["gluten","milk"],"bacon_burger.png","6,00",199);
-
-
-
-
-
+new Hamburger({name: "Classic Burger", allergies: ["gluten"], icon: "classic_burger.png", price: "5,00", stock: 250});
+new Hamburger({name: "Hamburger Deluxe", allergies: ["gluten","milk"], icon: "whopper_burger.png", price: "6,00", stock: 199});
+new Hamburger({name: "Veggie Burger", allergies: ["gluten"], icon: "veggie_burger.png", price: "5,50", stock: 99});
+new Hamburger({name: "Cheeseburger", allergies: ["gluten","milk"], icon: "cheeseburger.png", price: "6,00", stock: 199});
+new Hamburger({name: "Bacon Burger", allergies: ["gluten","milk"], icon: "bacon_burger.png", price: "5,20", stock: 199});

@@ -28,7 +28,7 @@
         top: 0;
     }
     
-    #decoration__stripLeft, #decoration__stripRight {
+    #decoration__strip-left, #decoration__strip-right {
         position: absolute;
         background-color: pink;
         width: 5vw;
@@ -38,11 +38,11 @@
         background-repeat: repeat;
     }
 
-    #decoration__stripLeft{
+    #decoration__strip-left{
         left: 0px;
     }
 
-    #decoration__stripRight {
+    #decoration__strip-right {
         right: 0px;
     }
 
