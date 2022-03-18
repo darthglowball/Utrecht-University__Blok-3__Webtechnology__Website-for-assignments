@@ -370,6 +370,10 @@ Footer styling
     text-align: center;
     text-transform: uppercase;
     font-size: 3em;
+    padding-top: 0;
+    padding-bottom: 0.1em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .introduction__title {
