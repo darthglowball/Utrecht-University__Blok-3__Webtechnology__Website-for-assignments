@@ -182,6 +182,7 @@ new IceCream({name: "Cookie", allergies: ["milk", "gluten"], icon: "cookie-cone.
 
 new Beverage({name: "Coca-Cola", allergies: [], icon: "coca-cola.png", price: "2.30", stock: 110});
 new Beverage({name: "Fanta Orange", allergies: [], icon: "fanta-orange.png", price: "2.20", stock: 50});
+new Beverage({name: "Sprite", allergies: [], icon: "sprite.png", price: "2.00", stock: 5});
 
 new Snack({name: "Frys", allergies: [], icon: "frietje.png", price: "2,50", stock: 500});
 new Snack({name: "Frikandel", allergies: [], icon: "frikandel.png", price: "2,00", stock: 150});
@@ -193,4 +194,4 @@ new Hamburger({name: "Classic Burger", allergies: ["gluten"], icon: "classic_bur
 new Hamburger({name: "Hamburger Deluxe", allergies: ["gluten","milk"], icon: "whopper_burger.png", price: "6,00", stock: 199});
 new Hamburger({name: "Veggie Burger", allergies: ["gluten"], icon: "veggie_burger.png", price: "5,50", stock: 99});
 new Hamburger({name: "Cheeseburger", allergies: ["gluten","milk"], icon: "cheeseburger.png", price: "6,00", stock: 199});
-new Hamburger({name: "Bacon Burger", allergies: ["gluten","milk"], icon: "bacon_burger.png", price: "6,00", stock: 199});
+new Hamburger({name: "Bacon Burger", allergies: ["gluten","milk"], icon: "bacon_burger.png", price: "5,20", stock: 199});
