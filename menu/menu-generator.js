@@ -11,7 +11,7 @@ class MenuSection {
         let sibling = document.getElementsByClassName("ingredients-overview")[0];
         this.presentation = document.createElement("section");
         this.presentation.className = "card-container menu-section";
-        this.presentation.id = "menu-section__" + name;
+        this.presentation.id = "menu-section__" + name.replace(" ", "-");
         let title = document.createElement("h2");
         title.className = "menu-section__title";
         title.appendChild(document.createTextNode(name + "s"));
@@ -21,7 +21,7 @@ class MenuSection {
     };
 };
 
-new MenuSection("IceCream");
+new MenuSection("Ice Cream");
 new MenuSection("Beverage");
 new MenuSection("Snack");
 new MenuSection("Hamburger");
@@ -141,7 +141,7 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
 
 
 
-class Food { // Data singleton. This is for shared properties. Does not instantiate it.
+class Food { // Data singleton. This is for shared properties. Do not instantiate it.
     price = 0;
     icon = "";
     calories = 0;
@@ -184,7 +184,7 @@ new Beverage({name: "Coca-Cola", allergies: [], icon: "coca-cola.png", price: "2
 new Beverage({name: "Fanta Orange", allergies: [], icon: "fanta-orange.png", price: "2.20", stock: 50});
 new Beverage({name: "Sprite", allergies: [], icon: "sprite.png", price: "2.00", stock: 5});
 
-new Snack({name: "Frys", allergies: [], icon: "frietje.png", price: "2,50", stock: 500});
+new Snack({name: "Fries", allergies: [], icon: "frietje.png", price: "2,50", stock: 500});
 new Snack({name: "Frikandel", allergies: [], icon: "frikandel.png", price: "2,00", stock: 150});
 new Snack({name: "Kroket", allergies: ["gluten"], icon: "kroket_van_dobben.png", price: "2,50", stock: 150});
 new Snack({name: "Cheese Soufle", allergies: ["gluten","milk"], icon: "kaassouffle.png", price: "2,00", stock: 25});
