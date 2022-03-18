@@ -109,7 +109,6 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
                 if (this.data.portions > 0){
                     this.data.portions--;
                     totalPortions--;
-                    this.data.stock++;
                     totalPrice -= parseFloat(this.data.price);
                     this.updatePortion(numberOfPortions, this.data.portions);
                     updateShoppingBasket(this);
@@ -120,7 +119,6 @@ class FoodSection { // Presentation (& handler) of a Food derivative. Does not i
                 if (this.data.portions < this.data.stock){
                     this.data.portions++;
                     totalPortions++;
-                    this.data.stock--;
                     totalPrice += parseFloat(this.data.price);
                     this.updatePortion(numberOfPortions, this.data.portions);
                     updateShoppingBasket(this);
