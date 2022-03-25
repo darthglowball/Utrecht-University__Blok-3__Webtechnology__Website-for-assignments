@@ -1,6 +1,6 @@
 // Presentation Logic of Navigation
 alert("test run");
-fetch("./actions/getUserLoggedIn()")
+fetch("/actions/getUserLoggedIn()")
 .then(result => {
     if (result.ok){
         return result.json();
