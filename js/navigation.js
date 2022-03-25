@@ -29,7 +29,7 @@ importHTML(`
                 $("navbar__user-link").style.visibility = "visible";
                 $("navbar__user-link").textContent = result.body + "'s Profile";
             };
-        })
+        }).catch(()=>{$("navbar__login-container").textContent = "Error: can't get user login state."})
     </script>
 </header>
 `)
