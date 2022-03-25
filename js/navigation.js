@@ -13,13 +13,13 @@ importHTML(`
             <div class="fas fa-bars" class="icon"></div>
         </div>
         -->
-        <div id="navbar__login-container">
-            <script>
-                
-            </script>
-            <a id="navbar__login-link" href="../login/index.html">Login</a>
-            <a id="navbar__user-link" href="../user/index.html">Profile</a>
-        </div>
     </nav>
+    <div id="navbar__login-container">
+        <script>
+            
+        </script>
+        <a id="navbar__login-link" href="../login/index.html">Login</a>
+        <a id="navbar__user-link" href="../user/index.html">Profile</a>
+    </div>
 </header>
 `)
