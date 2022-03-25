@@ -20,6 +20,7 @@ importHTML(`
     </div>
     <script> 
         // Presentation Logic
+        alert("test run");
         fetch("actions/getUserLoggedIn()")
         .then(result => {
             if (result.ok){
