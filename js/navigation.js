@@ -18,6 +18,5 @@ importHTML(`
         <a id="navbar__login-link" style="visibility: hidden" href="../login/index.html">Login</a>
         <a id="navbar__user-link" style="visibility: hidden" href="../user/index.html">Profile</a>
     </div>
-    <script src="../shared-last.js"></script>
 </header>
 `)
