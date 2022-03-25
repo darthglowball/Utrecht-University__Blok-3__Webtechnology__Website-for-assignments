@@ -18,27 +18,6 @@ importHTML(`
         <a id="navbar__login-link" style="visibility: hidden" href="../login/index.html">Login</a>
         <a id="navbar__user-link" style="visibility: hidden" href="../user/index.html">Profile</a>
     </div>
-    <script> 
-        // Presentation Logic
-        alert("test run");
-        fetch("actions/getUserLoggedIn()")
-        .then(result => {
-            if (result.ok){
-                return result.json();
-            } else {
-                $("navbar__login-container").textContent = "Error: can't get user login state."
-            };
-        })
-        .then(data => {
-            if (data.name === "null"){
-                $("navbar__login-link").style.visibility = "visible";
-                $("navbar__user-link").style.visibility = "hidden";
-            } else {
-                $("navbar__login-link").style.visibility = "hidden";
-                $("navbar__user-link").style.visibility = "visible";
-                $("navbar__user-link").textContent = data.name + "'s Profile";
-            };
-        });
-    </script>
+    <script src="../shared-last.js"></script>
 </header>
 `)
