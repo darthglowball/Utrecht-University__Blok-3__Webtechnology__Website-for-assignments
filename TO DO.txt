@@ -51,3 +51,5 @@ Assignment 3:
 - Security:
   - SQL injections?
   - Cross site scripting?
+  - Insecure Direct Object Reference?
+  - Web server directory listing?
