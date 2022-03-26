@@ -1,5 +1,4 @@
 // Presentation Logic of Navigation
-alert("test run");
 fetch("/actions/getUserLoggedIn()")
 .then(result => {
     if (result.ok){
