@@ -50,7 +50,7 @@ Assignment 2:
 Assignment 3:
 - Security:
   - SQL injections: Prepared Statements or White List Input Validation?
-  - Cross site scripting?
+  - Cross site scripting: HTMLencode?
   - Insecure Direct Object Reference?
   - Web server directory listing?
   - password salt and hash?
