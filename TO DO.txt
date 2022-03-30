@@ -47,7 +47,7 @@ Assignment 2:
 - event propagation: create a drag and drop sauce bottle that can be dropped on the food item. Drag and drop is a use case for event propagation, because when the user mouses out of the bottle, it will still need to move with the mouse cursor, so ancestor nodes of the bottle can detect this movement and up/down press.
 
 
-Assignment 3:
+Assignment 3: 
 - Security: 
   - SQL injections: Prepared Statements or White List Input Validation?
   - Cross site scripting: HTMLencode?
