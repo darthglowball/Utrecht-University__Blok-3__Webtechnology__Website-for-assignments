@@ -55,7 +55,9 @@ Assignment 3:
       - Reflected CSS
       - DOM CSS
       - URL Fragment identifier invisible to server checks
-      - URL "javascript:"
+      - Whitelist URL "javascript:"
+      - Turn on CSP with HTTP header: Content‑Security‑Policy
+      
   - Insecure Direct Object Reference?
   - Web server directory listing?
   - password salt and hash?
