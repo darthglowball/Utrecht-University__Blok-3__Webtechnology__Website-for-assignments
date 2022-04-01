@@ -50,7 +50,11 @@ Assignment 2:
 Assignment 3: 
 - Security:
   - SQL injections: Prepared Statements or White List Input Validation?
-  - Cross site scripting: HTMLencode?
+  - Cross site scripting: use HTMLencode?
+      - Persistent CSS
+      - Reflected CSS
+      - DOM CSS
+      - URL Fragment identifier invisible to server checks
   - Insecure Direct Object Reference?
   - Web server directory listing?
   - password salt and hash?
