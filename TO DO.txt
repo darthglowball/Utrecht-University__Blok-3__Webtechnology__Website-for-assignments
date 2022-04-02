@@ -61,7 +61,7 @@ Assignment 3:
     - Encrypt transmitted credentials
     - Insecure Direct Object Reference?
     - Don't use URL parameters for sensitive info
-    - Login: show password OR username incorrect, not one of them; it provides too much info
+    - login enumeration attack: show password OR username incorrect, not one of them; it provides too much info
     - Login attempts delay: fixed delay regardless of processing time, as to not reveal which credential passed; but avoid creating Denial of Service issue (node should be fine because it is asynchronous)
     - Don't return server response time of client request in errors
     - Prevent Web server directory listing
