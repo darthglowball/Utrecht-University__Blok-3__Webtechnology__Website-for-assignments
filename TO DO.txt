@@ -49,6 +49,10 @@ Assignment 2:
 
 Assignment 3: 
 - Security:
+
+    - Sosnovsky said in lecture 13 at 1:39: protect atleast against SQL injection and CSS
+    
+    Other options:
     - SQL injections: Prepared Statements or White List Input Validation?
     - Cross site scripting: use HTMLencode?
         - Persistent CSS
