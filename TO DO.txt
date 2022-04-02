@@ -68,6 +68,7 @@ Assignment 3:
     - password salt and hash?
     - Session stealing prevention: rotate session after user inactivity
     - Session fixation attack?
+    - SSRF?
 - Logging:
     - Login failures and attempts
     - Extra logging for high value transaction: more than 1000$ order? use audit trail and integrity controls?
