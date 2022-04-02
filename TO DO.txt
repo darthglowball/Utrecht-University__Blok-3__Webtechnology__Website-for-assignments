@@ -49,20 +49,22 @@ Assignment 2:
 
 Assignment 3: 
 - Security:
-  - SQL injections: Prepared Statements or White List Input Validation?
-  - Cross site scripting: use HTMLencode?
-      - Persistent CSS
-      - Reflected CSS
-      - DOM CSS
-      - URL Fragment identifier invisible to server checks
-      - Whitelist URL "javascript:"
-      - Turn on CSP with HTTP header: Content‑Security‑Policy
-  - Hide sensitive info in errors
-  - Encrypt transmitted credentials
-  - Insecure Direct Object Reference?
-  - Don't use URL parameters for sensitive info
-  - Login: show password OR username incorrect, not one of them; it provides too much info
-  - Login attempts delay: fixed delay regardless of processing time, as to not reveal which credential passed; but avoid creating Denial of Service issue (node should be fine because it is asynchronous)
-  - Don't return time of request in errors
-  - Prevent Web server directory listing
-  - password salt and hash?
+    - SQL injections: Prepared Statements or White List Input Validation?
+    - Cross site scripting: use HTMLencode?
+        - Persistent CSS
+        - Reflected CSS
+        - DOM CSS
+        - URL Fragment identifier invisible to server checks
+        - Whitelist URL "javascript:"
+        - Turn on CSP with HTTP header: Content‑Security‑Policy
+    - Hide sensitive info in errors
+    - Encrypt transmitted credentials
+    - Insecure Direct Object Reference?
+    - Don't use URL parameters for sensitive info
+    - Login: show password OR username incorrect, not one of them; it provides too much info
+    - Login attempts delay: fixed delay regardless of processing time, as to not reveal which credential passed; but avoid creating Denial of Service issue (node should be fine because it is asynchronous)
+    - Don't return server response time of client request in errors
+    - Prevent Web server directory listing
+    - password salt and hash?
+- Logging:
+    - Login failures and attempts
