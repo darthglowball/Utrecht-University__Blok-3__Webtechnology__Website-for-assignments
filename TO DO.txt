@@ -66,5 +66,9 @@ Assignment 3:
     - Don't return server response time of client request in errors
     - Prevent Web server directory listing
     - password salt and hash?
+    - Session stealing prevention: rotate session after user inactivity
+    - Session fixation attack?
 - Logging:
     - Login failures and attempts
+    - Extra logging for high value transaction: more than 1000$ order? use audit trail and integrity controls?
+    - Encrypt logs
