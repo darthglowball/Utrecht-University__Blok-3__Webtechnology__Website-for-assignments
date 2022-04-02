@@ -62,5 +62,6 @@ Assignment 3:
   - Insecure Direct Object Reference?
   - Don't use URL parameters for sensitive info
   - Login: show password OR username incorrect, not one of them; it provides too much info
+  - Don't return time of request in errors
   - Prevent Web server directory listing
   - password salt and hash?
