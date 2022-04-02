@@ -57,7 +57,10 @@ Assignment 3:
       - URL Fragment identifier invisible to server checks
       - Whitelist URL "javascript:"
       - Turn on CSP with HTTP header: Content‑Security‑Policy
-      
+  - Hide sensitive info in errors
+  - Encrypt transmitted credentials
   - Insecure Direct Object Reference?
-  - Web server directory listing?
+  - Don't use URL parameters for sensitive info
+  - Login: show password OR username incorrect, not one of them; it provides too much info
+  - Prevent Web server directory listing
   - password salt and hash?
