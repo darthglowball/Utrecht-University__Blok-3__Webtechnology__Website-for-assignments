@@ -3,7 +3,7 @@ const fs = require("fs");
 
 // Maps JSON HTTP body parameters to SQLite commands, does error handling, SQL sanitization, and converts to JSON.
 // database has methods that can be called within this script, but client-side Javascript fetch has to use these methods indirectly by using more abstract methods.
-// URL path syntax: method(group, instance)
+// URL path syntax: method(group, instance)asdfadsfsadf
 
 let db = { // singleton: instances itself.
     "init": function(){
