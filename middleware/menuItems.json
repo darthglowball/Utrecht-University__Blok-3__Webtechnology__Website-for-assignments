@@ -1,0 +1,28 @@
+[
+    {"class": "IceCream", "name": "Vanilla", "allergies": ["milk"], "icon": "ice-cream_White.png", "price": "2.35", "stock": 100},
+    {"class": "IceCream", "name": "Hazel", "allergies": ["milk", "milk"], "icon": "ice-cream_Brown.png", "price": "2.10", "stock": 200},
+    {"class": "IceCream", "name": "Pistache", "allergies": ["milk", "nuts"], "icon": "ice-cream_Green.png", "price": "1.20", "stock": 130},
+    {"class": "IceCream", "name": "Strawberry Cheesecake", "allergies": ["milk", "fruit", "gluten"], "icon": "ice-cream_Pink.png", "price": "3.10", "stock": 30},
+    {"class": "IceCream", "name": "Blueberry and Raspberry", "allergies": ["fruit"], "icon": "ice-cream_Purple.png", "price": "2.45", "stock": 66},
+    {"class": "IceCream", "name": "Smurf", "allergies": ["milk"], "icon": "ice-cream_Blue.png", "price": "1.75", "stock": 44},
+    {"class": "IceCream", "name": "Brown Butter Pecan", "allergies": ["milk"], "icon": "ice-cream_Orange.png", "price": "3.25", "stock": 238},
+    {"class": "IceCream", "name": "Lime", "allergies": [], "icon": "lime-cone.png", "price": "1.20", "stock": 8},
+    {"class": "IceCream", "name": "Melon", "allergies": [], "icon": "melon-cone.png", "price": "1.60", "stock": 23},
+    {"class": "IceCream", "name": "Cookie", "allergies": ["milk", "gluten"], "icon": "cookie-cone.png", "price": "1.70", "stock": 325},
+
+    {"class": "Beverage", "name": "Coca-Cola", "allergies": [], "icon": "coca-cola.png", "price": "2.30", "stock": 110},
+    {"class": "Beverage", "name": "Fanta Orange", "allergies": [], "icon": "fanta-orange.png", "price": "2.20", "stock": 50},
+    {"class": "Beverage", "name": "Sprite", "allergies": [], "icon": "sprite.png", "price": "2.00", "stock": 5},
+
+    {"class": "Snack","name": "Fries", "allergies": [], "icon": "frietje.png", "price": "2,50", "stock": 500},
+    {"class": "Snack","name": "Frikandel", "allergies": [], "icon": "frikandel.png", "price": "2,00", "stock": 150},
+    {"class": "Snack","name": "Kroket", "allergies": ["gluten"], "icon": "kroket_van_dobben.png", "price": "2,50", "stock": 150},
+    {"class": "Snack","name": "Cheese Soufle", "allergies": ["gluten","milk"], "icon": "kaassouffle.png", "price": "2,00", "stock": 25},
+    {"class": "Snack","name": "Spring Roll", "allergies": [], "icon": "loempia_deluxe.png", "price": "3,00", "stock": 99},
+
+    {"class": "Hamburger","name": "Classic Burger", "allergies": ["gluten"], "icon": "classic_burger.png", "price": "5,00", "stock": 250},
+    {"class": "Hamburger","name": "Hamburger deluxexe", "allergies": ["gluten","milk"], "icon": "whopper_burger.png", "price": "6,00", "stock": 199},
+    {"class": "Hamburger","name": "Veggie Burger", "allergies": ["gluten"], "icon": "veggie_burger.png", "price": "5,50", "stock": 99},
+    {"class": "Hamburger","name": "Cheeseburger", "allergies": ["gluten","milk"], "icon": "cheeseburger.png", "price": "6,00", "stock": 199},
+    {"class": "Hamburger","name": "Bacon Burger", "allergies": ["gluten","milk"], "icon": "bacon_burger.png", "price": "5,20", "stock": 199}
+]
