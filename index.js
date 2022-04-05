@@ -5,6 +5,10 @@ let crypto = require("crypto");
 let session = require("express-session");
 const sqlite = require("sqlite3");
 const fs = require("fs");
+const path = require('path');
+
+const logger = require('./middleware/logger');
+const errorHandler = require('./middleware/errorHandler');
 
 let app = express();
 let router = express.Router();
@@ -12,8 +16,12 @@ let router = express.Router();
 const PORT = 8060
 
 //app.use(express.json()); ???
+app.use(logger);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({"cookie": {"httpOnly": false, "secure": true, "maxAge": null}, "name": "session", "secret": crypto.createHash("sha256").update(Math.random().toString()).digest("hex")}));
+
+//Set static folder
+app.use(express.static(path.join(__dirname,'public')));
 
 function isSingleStringInputClean(input){ // used to make a general format for strings in the database.
     let index = 0;
@@ -155,7 +163,7 @@ router.post("actions/registerUser", (error, request, response, next) => {
     );
 });
 
-app.use((error, request, response, next) => { response.status(500).send("Something failed!")});
 
+app.use(errorHandler);
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 //database.original.close(); // necessary?
