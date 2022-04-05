@@ -1,10 +1,10 @@
 // Presentation Logic of Navigation
-fetch("/actions/getUserLoggedIn()", {method: "GET"})
+fetch("/actions/getUserLoggedIn", {method: "GET"})
 .then(result => {
     if (result.ok){
         return result.json();
     } else {
-        $("navbar__login-container").textContent = "Error: can't get user login state."
+        $("navbar__login-container").textContent = "Error: can't get user login state.";
     };
 })
 .then(data => {
