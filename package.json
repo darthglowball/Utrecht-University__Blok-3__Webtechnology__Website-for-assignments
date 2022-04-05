@@ -1,0 +1,31 @@
+{
+  "name": "utrecht-university__blok-3__webtechnology__website-for-assignments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darthglowball/Utrecht-University__Blok-3__Webtechnology__Website-for-assignments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darthglowball/Utrecht-University__Blok-3__Webtechnology__Website-for-assignments/issues"
+  },
+  "homepage": "https://github.com/darthglowball/Utrecht-University__Blok-3__Webtechnology__Website-for-assignments#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "fs": "^0.0.1-security",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
