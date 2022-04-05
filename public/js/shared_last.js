@@ -4,7 +4,7 @@ fetch("/actions/getUserLoggedIn()", {method: "GET"})
     if (result.ok){
         return result.json();
     } else {
-        $("navbar__login-container").textContent = "Error: can't get user login state."
+        $("navbar__login-container").textContent = "Error: can't get user login state.";
     };
 })
 .then(data => {
