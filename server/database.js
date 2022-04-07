@@ -16,7 +16,8 @@ let db = { // singleton: instances itself.
             if (!this.fileExists){
                 this.original.run("CREATE TABLE Users (name INTEGER, password TEXT, email TEXT, address TEXT, creationDate TEXT)");
                 this.original.run("CREATE TABLE Orders (id INTEGER, username TEXT, sessionId INTEGER, status TEXT, creationDate TEXT, data TEXT)"); // status: unfinished, pending, closed
-                this.original.run("CREATE TABLE Menu (class TEXT, name TEXT, allergies TEXT, icon TEXT, price TEXT, stock INTEGER, creationDate TEXT)"); // status: unfinished, pending, closed
+                this.original.run("CREATE TABLE Menu (class TEXT, name TEXT, allergies TEXT, icon TEXT, price TEXT, stock INTEGER, creationDate TEXT)");
+                this.original.run("CREATE TABLE Reviews (username TEXT, rating INTEGER, comment TEXT, creationDate TEXT)");
             };
         });
     }(),
