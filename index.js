@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require('path');
 
 const logger = require('./middleware/logger');
-const errorHandler = require('./middleware/errorHandler');
+const defaultErrorHandler = require('./middleware/defaultErrorHandler');
 const db = require("./server/database");
 
 let app = express();
@@ -118,6 +118,6 @@ router.post("actions/registerUser", (error, request, response, next) => {
 });
 
 
-app.use(errorHandler);
+app.use(defaultErrorHandler);
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 //database.original.close(); // necessary?
