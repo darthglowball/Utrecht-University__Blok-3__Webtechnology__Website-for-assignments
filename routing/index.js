@@ -21,7 +21,7 @@ router.get("/menu/index.html", (error, request, response, next) => {
 // Actions from client.
 router.get("actions/getUserOrderHistory", (error, request, response, next) => {
 
-};
+)};
 
 
 router.get("actions/getUserCurrentOrder", (error, request, response, next) => {
