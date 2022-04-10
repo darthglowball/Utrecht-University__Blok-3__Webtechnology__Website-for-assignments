@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+    <head> <meta charset = "utf-8"> </head>
+    <body>
+        <article id="main-content">
+            <section id="user__info-container">
+                <table id="user__info">
+                    <th>User Information</th>
+                </table>
+            </section>
+            <section id="user__order-history-container">
+                <table id="user__order-history">
+                    <th>Order History</th>
+                </table>
+            </section>
+        </article>
+        <script>
+            // User get from database
+            fetch("/actions/getUserLoggedIn", {method: "GET"})
+            .then(result => {
+                if (result.ok){
+                    return result.json();
+                } else {
+                    $("main-content").textContent += "Error: can't get user info.";
+                };
+            })
+            .then(data => {
+                if (data.user !== "null"){
+                    for (propertyName in data.user){
+                        let propertyValue = data.user[propertyName];
+                        let row = document.createElement("tr");
+                        let cellName = document.createElement("td");
+                        let cellValue = document.createElement("td");
+                        cellName.textContent = propertyName;
+                        cellValue.textContent = propertyValue;
+                        row.appendChild(cellName);
+                        row.appendChild(cellValue);
+                        $("user__info").appendChild(row);
+                    };
+                };
+            });
+
+
+            // Order History get from database
+            // Make it foldable table onclick?
+            fetch("/actions/getUserOrderHistory", {method: "GET"})
+            .then(result => {
+                if (result.ok){
+                    return result.json();
+                } else {
+                    $("main-content").textContent += "Error: can't get user order history.";
+                };
+            })
+            .then(data => {
+                if (data.orderHistory !== "null"){
+                    for (order of data.orderHistory){
+                        let row = document.createElement("tr");
+                        for (property of order){
+                            let cell = document.createElement("td");
+                            cell.textContent = property;
+                            row.appendChild(cell);
+                        };
+                        $("user__order-history").appendChild(row);
+                    };
+                };
+            });
+        </script>
+    </body>
+</html>
