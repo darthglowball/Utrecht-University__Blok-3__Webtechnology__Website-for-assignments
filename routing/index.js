@@ -19,8 +19,12 @@ router.get("/menu/index.html", (error, request, response, next) => {
 
 
 // Actions from client.
+router.get("actions/getUserOrderHistory", (error, request, response, next) => {
 
-router.get("actions/getFoodItemsFromSession", (error, request, response, next) => {
+};
+
+
+router.get("actions/getUserCurrentOrder", (error, request, response, next) => {
     let foodItems = db.getCells("Orders", ["data"], ["sessionId=${request.session.id}"], next);
     response.send(JSON.stringify(foodItems));
 });
