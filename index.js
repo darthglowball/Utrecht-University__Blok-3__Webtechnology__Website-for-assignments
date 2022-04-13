@@ -7,14 +7,11 @@ const fs = require("fs");
 const path = require('path');
 
 let app = express();
-let router = express.Router();
 
 const logger = require('./middleware/logger');
 const defaultErrorHandler = require('./middleware/defaultErrorHandler');
-const db = require("./server/database");
-const routing = require("./routing/index.js");
-
-
+const database = require("./database/database");
+const routing = require("./routing/router");
 
 const PORT = 8060
 
@@ -52,6 +49,8 @@ function getUserLoggedIn(sessionId){
     let userInfo = database.getCells("Users", null, {"sessionId": sessionId});
     return JSON.stringify(userInfo); // if there's a user with the sessionId, they're logged in, so return some info about them.
 };
+
+//app.use('/',routing);
 
 app.use(defaultErrorHandler);
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

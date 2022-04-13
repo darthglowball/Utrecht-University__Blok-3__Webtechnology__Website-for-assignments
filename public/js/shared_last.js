@@ -1,5 +1,5 @@
 // Presentation Logic of Navigation
-fetch("/actions/getUserLoggedIn", {method: "GET"})
+fetch("actions/getUserLoggedIn", {method: "GET"})
 .then(result => {
     if (result.ok){
         return result.json();
