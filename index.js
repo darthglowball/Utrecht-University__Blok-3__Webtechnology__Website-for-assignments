@@ -1,4 +1,5 @@
 let express = require("express");
+const router = express.Router;
 let bodyParser = require("body-parser");
 let cookieParser = require("cookie-parser");
 let crypto = require("crypto");
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({"cookie": {"httpOnly": false, "secure": true, "maxAge": null}, "name": "session", "secret": crypto.createHash("sha256").update(Math.random().toString()).digest("hex")}));
 
 //Set static folder
+app.use('/',routing);
 app.use(express.static(path.join(__dirname,'public')));
 
 function isSingleStringInputClean(input){ // used to make a general format for strings in the database.
