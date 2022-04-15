@@ -1,6 +1,24 @@
+const { Router } = require("express");
+
 class Menu { // Singleton container for MenuSection.
     static data = [];
 };
+
+var selector = document.querySelector("#categorySelector");
+selector.addEventListener("change",onChangeSelectOption);
+
+function onChangeSelectOption(e){
+    if (e.target != ""){
+        return
+    }
+}
+
+Router.post("/menu/menu.html",(req,res) =>{
+    let choice = req.body.choice;
+    database.getCells("Menu","*",choice);
+    
+
+})
 
 // - MenuSection is used as a container for derivatives of Food and for the presentation thereof, so don't have Data classes inherit from it.
 // - "HasA" relationship with Menu.
