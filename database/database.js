@@ -10,44 +10,52 @@ let db = { // singleton: instances itself.
         this.sqlite = sqlite3.verbose();
         this.filePath = __dirname + "/database.db";
         this.fileExists = fs.existsSync(this.filePath);
-        this.original = new sqlite.Database(this.filePath);
-        if (!this.fileExists){ fs.openSync(filePath, "w") };
-        this.original.serialize(()=> {
+        this.original = new this.sqlite.Database(this.filePath);
+        if (!this.fileExists){ fs.openSync(this.filePath, "w") };
+        this.original.serialize((()=> {
             if (!this.fileExists){
-                this.original.run("CREATE TABLE Users (name INTEGER, password TEXT, email TEXT, address TEXT, creationDate TEXT)");
-                this.original.run("CREATE TABLE Orders (id INTEGER, username TEXT, sessionId INTEGER, status TEXT, creationDate TEXT, data TEXT)"); // status: unfinished, pending, closed
-                this.original.run("CREATE TABLE Menu (class TEXT, name TEXT, allergies TEXT, icon TEXT, price TEXT, stock INTEGER, creationDate TEXT)");
-                this.original.run("CREATE TABLE Reviews (username TEXT, foodItem TEXT, rating INTEGER, comment TEXT, creationDate TEXT)");
+                this.original.run("CREATE TABLE Users (username TEXT, password TEXT, email TEXT, address TEXT, town TEXT, creationDate INT);");
+                this.original.run("CREATE TABLE Orders (id INT, username TEXT, status TEXT, creationDate INT, data TEXT);"); // status: unfinished, pending, closed. Order history should be retrieved from Orders by username.
+                this.original.run("CREATE TABLE Menu (class TEXT, name TEXT, allergies TEXT, icon TEXT, price TEXT, stock INT, creationDate INT);");
+                this.original.run("CREATE TABLE Sessions (id TEXT, username TEXT, _order INT, creationDate INT);");
+                console.log("DATABASE CREATED");
+            } else {
+                this.original.run("DROP TABLE Sessions;"); // clear sessions on startup
+                this.original.run("CREATE TABLE Sessions (id TEXT, username TEXT, _order INT, creationDate INT);");
+                console.log("DATABASE SESSIONS CLEARED");
             };
-        });
-    }(),
+        }).bind(this));
+    },
     "pushRecord": function(table, record, next){ // pushes a record
-        let insertion = this.original.prepare("INSERT INTO " + table + "VALUES (?)");
-        for (let columnName in record){
-            let cellValue = record[columnName];
-            insertion.run(columnName + "#" + cellValue);
-        };
-        insertion.finalize();       
+        let query = "INSERT INTO " + table + ` (${Object.keys(record).toString()}) VALUES (${'?,'.repeat(Object.keys(record).length).slice(0,-1)});`;
+        let insertion = this.original.prepare(query); // generates the questionmarks to prevent SQL injection
+        insertion.run(...Object.values(record));
+        console.log("Database command: ", query);
+        insertion.finalize();
     },
     "setCells": function(table, attributes, attributeConditions, next){
         let query = "UPDATE " + table + " SET ";
         query += JSON.stringify(attributes).slice(1, -1).replaceAll("'", "").replaceAll('"', "").replaceAll(":", "=");
         query += " WHERE " + attributeConditions.toString().replaceAll(",", " ");
+        console.log("Database command: ", query);
         let cells = this.original.run(query);
     },
-    "getCells": function(table, columns, attributeConditions, next){ // gets cell(s) by columns, attributeConditions. If columns is null, all columns are selected. If attributeConditions is null, there are no conditions.
-        let query = "SELECT " + columns && columns.toString() || "*" + " FROM " + table + attributeConditions && " WHERE " || ";";
-        let count = 1;
-        let length = attributeConditions.length;
-        for (let condition in attributeConditions){
-            query += condition + (count === length && " , " || ";");
-            count++;
-        };
-        let cells = this.original.run(query);
-        this.original.finalize();
-        if (!cells){next(new Error("Database: getCells failed; no such cell(s) found"))}; 
-        return cells;
+    "getCells": async function(table, columns, attributeConditions, next){ // gets cell(s) by columns, attributeConditions. If columns is null, all columns are selected. If attributeConditions is null, there are no conditions.
+        let query = "SELECT " + (columns && columns?.toString() || "*") + " FROM " + table + (attributeConditions && ` WHERE ${attributeConditions}`) + ";";
+        let database = this;
+        console.log("Database command: ", query);
+        let cellsPromise = new Promise(function(resolve, reject) {
+            database.original.serialize(() => {
+                database.original.all(query, function(err, cells) {
+                    resolve(cells);
+                    if (Object.keys(cells).length === 0){ reject("Database: getCells failed; no such cell(s) found") }; 
+                });
+            });
+        });
+        return cellsPromise;
     }
 };
+
+db.init()
 
 module.exports = db;

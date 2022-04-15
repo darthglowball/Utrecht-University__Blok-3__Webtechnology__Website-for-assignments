@@ -48,6 +48,14 @@ Assignment 2:
 
 
 Assignment 3: 
+- General:
+    - fix input validators
+    - login page
+    - password hash on client
+    - send json format, not parameters
+    - add loginUser function, and use it in registerUser and loginUser routes
+    - move session hijacking protection to loginUser
+    - existing user register check
 - Security:
 
     - Sosnovsky said in lecture 13 at 1:39: protect atleast against SQL injection and CSS

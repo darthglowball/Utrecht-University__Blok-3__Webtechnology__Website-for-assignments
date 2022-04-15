@@ -1,5 +1,6 @@
 // Presentation Logic of Navigation
-fetch("actions/getUserLoggedIn", {method: "GET"})
+
+fetch(window.location.origin + "/actions/getUserLoggedIn", {method: "GET"})
 .then(result => {
     if (result.ok){
         return result.json();
@@ -8,12 +9,16 @@ fetch("actions/getUserLoggedIn", {method: "GET"})
     };
 })
 .then(data => {
-    if (data.name === "null"){
-        $("navbar__login-link").style.visibility = "visible";
-        $("navbar__user-link").style.visibility = "hidden";
-    } else {
+    if (data?.username){
         $("navbar__login-link").style.visibility = "hidden";
+        $("navbar__register-link").style.visibility = "hidden";
+        $("navbar__logout-link").style.visibility = "visible";
         $("navbar__user-link").style.visibility = "visible";
-        $("navbar__user-link").textContent = data.name + "'s Profile";
+        $("navbar__user-link").textContent = data.username + "'s Profile";
+    } else {
+        $("navbar__login-link").style.visibility = "visible";
+        $("navbar__register-link").style.visibility = "visible";
+        $("navbar__logout-link").style.visibility = "hidden";
+        $("navbar__user-link").style.visibility = "hidden";
     };
 });

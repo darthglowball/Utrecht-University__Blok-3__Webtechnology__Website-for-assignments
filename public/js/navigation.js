@@ -16,7 +16,9 @@ importHTML(`
     </nav>
     <div id="navbar__login-container">
         <a id="navbar__login-link" style="visibility: hidden" href="../login/index.html">Login</a>
+        <a id="navbar__register-link" style="visibility: hidden" href="../register/index.html">Register</a>
         <a id="navbar__user-link" style="visibility: hidden" href="../user/index.html">Profile</a>
+        <a id="navbar__logout-link" style="visibility: hidden" href="../userLogout">Logout</a>
     </div>
 </header>
 `)

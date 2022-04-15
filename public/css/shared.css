@@ -167,6 +167,24 @@ Responsive Table
     color: red;
 }
 
+#navbar__user-link, #navbar__logout-link {
+    display: inline-block;
+}
+
+#navbar__register-link, #navbar__login-link {
+    display: block;
+}
+
+#navbar__user-link, #navbar__register-link, #navbar__login-link, #navbar__logout-link {
+    font-size: 2rem;
+}
+
+#navbar__login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /*
 *********************
 side bar*/
